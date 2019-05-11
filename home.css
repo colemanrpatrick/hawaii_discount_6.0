@@ -298,14 +298,43 @@
 	overflow: hidden;
 	transition: 0.3s;
 }
-.activity-nav li a img{
+.activity-img{
 	position: absolute;
 	opacity: 0.2;
 	left: 0;
-	width: 90px;
+	height: 100%;
+	width: 100%;
 	transition: 0.3s;
 	z-index: 1;
-	top: 0;
+	top: 50%;
+	transform: scale(1) translateY(-50%);
+	background-size: cover;
+	background-image: url("images/activityIcons.png");
+}
+#luau-icon .activity-img{
+	background-position: 0 0;
+}
+#dinner-cruise-icon .activity-img {
+  background-position: -13.5em 0;
+}
+#pearl-harbor-icon .activity-img {
+  background-position: -27em 0;
+}
+#lei-greeting-icon .activity-img {
+  background-position: -40.5em 0;
+}
+#volcano-icon .activity-img {
+  background-position: -53.5em 0;
+}
+#helicopter-icon .activity-img {
+  background-position: -66.5em 0;
+}
+.activity-nav li a:hover{
+	background-color: gold;
+}
+.activity-nav li a:hover .activity-img{
+	opacity: 0.5;
+	transform: scale(1.1) translateY(-50%);
 }
 .activity-nav li a span{
 	color: white;
@@ -322,13 +351,6 @@
 	transition: 0.3s;
 	z-index: 2;
 }
-.activity-nav li a:hover{
-	background-color: gold;
-}
-.activity-nav li a:hover img{
-	opacity: 0.5;
-	transform: scale(1.2);
-}
 .activity-nav li a:hover span{
 	color: #b4007a;
 }
@@ -342,18 +364,22 @@
 	}
 }
 @media(max-width:800px){
+	.activity-nav {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
 	.mid-pane h3 {
     font-size: 25px;
 	}
 	.activity-nav li{
 	 	width: 33.3%;
+		padding-left: 1em;
+		padding-right: 1em;
+		padding-bottom: 1em;
  	}
 	.activity-nav li a{
     height: 70px;
     border-radius: 70px;
-	}
-	.activity-nav li a img {
-		top: -6px;
 	}
 	.activity-nav li a span {
 		width: 60%;
@@ -361,8 +387,44 @@
 		right: 0;
 		font-size: 20px;
 	}
+	#dinner-cruise-icon .activity-img {
+    background-position: -11.5em 0;
+	}
+	#pearl-harbor-icon .activity-img {
+	  background-position: -23em 0;
+	}
+	#volcano-icon .activity-img {
+	  background-position: -46.5em 0;
+	}
+	#lei-greeting-icon .activity-img {
+	  background-position: -35em 0;
+	}
+	#volcano-icon .activity-img {
+    background-position: -46.5em 0;
+	}
+	#helicopter-icon .activity-img {
+    background-position: -58em 0;
+	}
 }
 @media(max-width:600px){
+	#dinner-cruise-icon .activity-img {
+	  background-position: -9.5em 0;
+	}
+	#pearl-harbor-icon .activity-img {
+	  background-position: -20em 0;
+	}
+	#volcano-icon .activity-img {
+		background-position: -46.5em 0;
+	}
+	#lei-greeting-icon .activity-img {
+	  background-position: -30em 0;
+	}
+	#volcano-icon .activity-img {
+	 background-position: -39.5em 0;
+	}
+	#helicopter-icon .activity-img {
+	  background-position: -50em 0;
+	}
 	.activity-nav li {
 	  padding-left: 0.25em;
 	  padding-right: 0.25em;
@@ -371,21 +433,36 @@
 	.activity-nav li a {
     height: 60px;
 	}
-	.activity-nav li a img {
-    top: -2px;
-    width: 70px;
-	}
 }
 @media(max-width:500px){
 	.activity-nav {
 	  width: 90%;
 	  margin: 0 auto;
 	}
+	.activity-nav {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
 	.activity-nav li {
     width: 50%;
 	}
 	.activity-nav li a span {
 	    font-size: 16px;
+	}
+	#luau-icon .activity-img {
+    background-position: 2em 0;
+	}
+	#dinner-cruise-icon .activity-img {
+    background-position: -8.5em 0;
+	}
+	#lei-greeting-icon .activity-img {
+	   background-position: -28em 0;
+	}
+	#volcano-icon .activity-img {
+    background-position: -38em 0;
+	}
+	#helicopter-icon .activity-img {
+    background-position: -48em 0;
 	}
 }
 /*------------------------------------*/
@@ -442,6 +519,7 @@
 	border-radius: 50px;
 	background-size: 400%;
 	background-repeat: no-repeat;
+	/* background-image: url("../hawaiidiscount/images/coverage_icons.png"); */
 	background-image: url("images/coverage_icons.png");
 }
 #coverage-first .coverage-img{
@@ -483,6 +561,7 @@
 .checkpoint{
 	width: 100%;
 	position: relative;
+		/* background-image: url("../hawaiidiscount/images/home_bg2.jpg"); */
 	background-image: url("images/bg2.jpg");
 	background-size: cover;
 	background-position: center;
