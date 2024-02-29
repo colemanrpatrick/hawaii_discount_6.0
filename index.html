@@ -1,249 +1,390 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="user-scalable = yes, width=320, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="masthead">
-        <div class="logo">
-          <a href="#"> <img src="images/hawaii_discount_logo_new.jpg" alt=""> </a>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="/Content/themes/base/css?v=A06O5j6fQJt3flXqt3h9OakkVkTS3y4I6j7nmUz6SU01" rel="stylesheet"/>
+    <script src="/bundles/jquery?v=9ktsOtIo0upvJP7-7FiXuOoOJe58RLFJ__wIRPL2vGo1"></script>
+    <script src="/bundles/jqueryui?v=yqCVigxSu97_s_vulMWzX97PVmpAp1RUApV3df4vSeo1"></script>
+    <script type="text/javascript" src="js/toggle.js"></script>
+    <title>Hawaii Discount</title>
+</head>
+<body>
+   <div id="main">        
+       <nav class="main-nav" id="main-nav">
+            <section>
+                <ul>
+                    <li class="home"><a href="#"><span>home</span></a></li>
+                    <li>
+                        <a class="parentAnchor" href="#">activites</a>
+                        <button class="mobileDropDown" type="button" name="button"></button>
+                        <nav class="childNav">
+                            <a href="#">Dinner Cruises</a>
+                            <a href="#">Dolphin Swims</a>
+                            <a href="#">Entertainment</a>
+                            <a href="#">Fishing</a>
+                            <a href="#">Golf Courses</a>
+                            <a href="#">Horseback Riding</a>
+                            <a href="#">Kayaking</a>
+                            <a href="#">Lei Greetings</a>
+                            <a href="#">Luaus</a>
+                            <a href="#">Oahu Parasailing</a>
+                            <a href="#">Polynesian Cultural Ctr</a>
+                            <a href="#">Scuba Diving</a>
+                            <a href="#">Sea Life Park</a>
+                            <a href="#">Shark Cage Adventures</a>
+                            <a href="#">Snorkeling</a>
+                            <a href="#">Surfing</a>
+                            <a href="#">Ziplines</a>
+                        </nav>
+                    </li>
+                    <li>
+                        <a class="parentAnchor" href="#">tours</a>
+                        <button class="mobileDropDown" type="button" name="button"></button>
+                        <nav class="childNav">
+                            <a href="">ATV Tours</a>
+                            <a href="">Helicopter Tours</a>
+                            <a href="">Inter-Island Tours</a>
+                            <a href="">Kualoa Ranch</a>
+                            <a href="">Nature Tours</a>
+                            <a href="">Pearl Harbor</a>
+                            <a href="">Shore Excursions</a>
+                            <a href="">Sightseeing Tours</a>
+                            <a href="">Turtle Tours</a>
+                            <a href="">Volcano Tours</a>
+                            <a href="">Whale Watching</a>
+                        </nav>
+                    </li>
+                    <li>
+                        <a class="parentAnchor" href="#">luaus</a>
+                        <button class="mobileDropDown" type="button" name="button"></button>
+                        <nav class="childNav">
+                            <a href="#">oahu luaus</a>
+                            <a href="#">maui luaus</a>
+                            <a href="#">kauai luaus</a>
+                            <a href="#">big luaus</a>
+                        </nav>
+                    </li>
+                    <li>
+                        <a class="parentAnchor" href="#">by island</a>
+                        <button class="mobileDropDown" type="button" name="button"></button>
+                        <nav class="childNav">
+                            <a href="#">oahu island</a>
+                            <a href="#">maui island</a>
+                            <a href="#">kauai island</a>
+                            <a href="#">big island</a>
+                            <a href="#">lanai island</a>
+                        </nav>
+                    </li>
+                    <li><a class="parentAnchor" href="#">groups</a></li>
+                    <li><a class="parentAnchor" href="#">about us</a></li>
+                    <li><a class="parentAnchor" href="#">blog</a></li>
+                    <li style="width:40px;">
+                     
+                    </li>
+                </ul>
+            </section>
+        </nav>
+
+<div class="wrapper">
+    
+    <div class="masthead">
+        <button type="button" name="button" class="menu-btn" onclick="idToggle('menu-btn','active');idToggle('main-nav','active')" id="menu-btn">
+            <hr class="menu-btn-hr-1" />
+            <hr class="menu-btn-hr-2" />
+            <hr class="menu-btn-hr-3" />
+        </button>
+            <a href="#" id="cart-btn"><i class="material-icons">shopping_cart</i></a>
+            <div class="logo">
+                <a href="#"> <img src="images/main/HDnewLogo.png" alt=""> </a>
+            </div>
+            <div class="blurb">
+                <h1>Discount Hawaii Activities & Tours</h1>
+                <h2>Make Your Vacation Extraordinary</h2>
+            </div>
+            <ul class="phone">
+                <img src="images/main/privacy-guard.png" alt="">
+                <li>
+                    <span>(Toll Free)</span>
+                    <a href="tel:1-866-482-9775">1-866-482-9775</a>
+                </li>
+                <li>
+                    <span>(Local)</span>
+                    <a href="tel:808-892-2082">808-892-2082</a>
+                </li>
+            </ul>
         </div>
-        <div class="blurb">
-          <h1>Discount Hawaii Activities & Tours</h1>
-          <h2>Make Your Vacation Extraordinary</h2>
-        </div>
-        <ul class="phone">
-            <img src="images/privacy-guard.png" alt="">
-          <li>
-            <span>(Toll Free)</span>
-            <a href="#">1-866-482-9775</a>
-          </li>
-          <li>
-            <span>(Local)</span>
-            <a href="#">808-892-2082</a>
-          </li>
-        </ul>
-      </div>
-      <button type="button" name="button" class="menu-btn" onclick="idToggle('menu-btn','active');idToggle('main-nav','active')" id="menu-btn">
-        <hr class="menu-btn-hr-1"/>
-        <hr class="menu-btn-hr-2"/>
-        <hr class="menu-btn-hr-3"/>
-      </button>
-      <nav class="main-nav" id="main-nav">
-      <section>
-        <ul>
-          <li class="home"><a href="#"><span>home</span></a></li>
-          <li>
-          <a class="parentAnchor" href="#">activites</a>
-          <button class="mobileDropDown" type="button" name="button"></button>
-            <nav class="childNav">
-              <a href="#">Dinner Cruises</a>
-              <a href="#">Dolphin Swims</a>
-              <a href="#">Entertainment</a>
-              <a href="#">Fishing</a>
-              <a href="#">Golf Courses</a>
-              <a href="#">Horseback Riding</a>
-              <a href="#">Kayaking</a>
-              <a href="#">Lei Greetings</a>
-              <a href="#">Luaus</a>
-              <a href="#">Oahu Parasailing</a>
-              <a href="#">Polynesian Cultural Ctr</a>
-              <a href="#">Scuba Diving</a>
-              <a href="#">Sea Life Park</a>
-              <a href="#">Shark Cage Adventures</a>
-              <a href="#">Snorkeling</a>
-              <a href="#">Surfing</a>
-              <a href="#">Ziplines</a>
-            </nav>
-          </li>
-          <li>
-            <a class="parentAnchor" href="#">tours</a>
-            <button class="mobileDropDown" type="button" name="button"></button>
-            <nav class="childNav">
-              <a href="">ATV Tours</a>
-              <a href="">Helicopter Tours</a>
-              <a href="">Inter-Island Tours</a>
-              <a href="">Kualoa Ranch</a>
-              <a href="">Nature Tours</a>
-              <a href="">Pearl Harbor</a>
-              <a href="">Shore Excursions</a>
-              <a href="">Sightseeing Tours</a>
-              <a href="">Turtle Tours</a>
-              <a href="">Volcano Tours</a>
-              <a href="">Whale Watching</a>
-            </nav>
-          </li>
-          <li>
-            <a class="parentAnchor" href="#">luaus</a>
-            <button class="mobileDropDown" type="button" name="button"></button>
-            <nav class="childNav">
-              <a href="#">oahu luaus</a>
-              <a href="#">maui luaus</a>
-              <a href="#">kauai luaus</a>
-              <a href="#">big luaus</a>
-            </nav>
-          </li>
-          <li>
-            <a class="parentAnchor" href="#">by island</a>
-            <button class="mobileDropDown" type="button" name="button"></button>
-            <nav class="childNav">
-              <a href="#">oahu island</a>
-              <a href="#">maui island</a>
-              <a href="#">kauai island</a>
-              <a href="#">big island</a>
-              <a href="#">lanai island</a>
-            </nav>
-          </li>
-          <li><a class="parentAnchor"href="#">groups</a></li>
-          <li><a class="parentAnchor" href="#">about us</a></li>
-          <li><a class="parentAnchor" href="#">blog</a></li>
-          <li><a class="parentAnchor" href="#">cart</a></li>
-        </ul>
-      </nav>
-      <input type="text" name="" value=""></input>
-    </section>
-<!--- ====== ----->
+
+    <!--end navigation-->
+
+    <!-- navigation -->
+
     <div class="top-pane">
-      <header>
-        <h2>welcome to<br/>hawaii discount 6.0</h2>
-        <h3>this is a prototype home page</h3>
-      </header>
-      <div class="banner">
-        <img src="images/luauPeople.png" id="luau-people" alt="">
+        <header>
+            <h2>welcome to<br />hawaii discount 6.0</h2>
+            <h3>this is a prototype home page</h3>
+        </header>
+        <div class="banner">
+            <img src="images/home/luauPeople.png" id="luau-people" alt="">
         </div>
-      <nav class="island-nav">
-        <!--====-->
-        <a href="#">
-          <div class="anchor-left">
-            <img src="images/oahu_icon.png" alt="">
-          </div>
-          <div class="anchor-right">
-            <span class="span-1">oahu</span>
-            </br>
-            <span class="span-2">waikiki - kahala - ko olina<span>
-          </div>
-        </a>
-        <!--====-->
-        <a href="#">
-          <div class="anchor-left">
-            <img src="images/maui_icon.png" alt="">
-          </div>
-          <div class="anchor-right">
-            <span class="span-1">maui</span>
-            </br>
-            <span class="span-2">lahaina - wailea - kaanapali</span>
-          </div>
-        </a>
-        <!--====-->
-        <a href="#">
-          <div class="anchor-left">
-            <img src="images/big_island_icon.png" alt="">
-          </div>
-          <div class="anchor-right">
-            <span class="span-1">big island</span>
-            </br>
-            <span class="span-2">kona - waikoloa - hilo</span>
-          </div>
-        </a>
-        <!--====-->
-        <a href="#">
-          <div class="anchor-left">
-            <img src="images/kauai_icon.png" alt="">
-          </div>
-          <div class="anchor-right">
-            <span class="span-1">kauai</span>
-            </br>
-            <span class="span-2">poipu - kapaa - princeville</span>
-          </div>
-        </a>
-        <!--====-->
-      </nav>
+        <nav class="island-nav">
+            <!--====-->
+            <a href="#">
+                <div class="anchor-left">
+                    <img src="images/home/oahu_icon.png" />
+                </div>
+                <div class="anchor-right">
+                    <span class="span-1">oahu</span>
+                    <br/>
+                    <span class="span-2">waikiki - kahala - ko olina</span>
+                </div>
+            </a>
+            <!--====-->
+            <a href="#">
+                <div class="anchor-left">
+                    <img src="images/home/maui_icon.png" alt="">
+                </div>
+                <div class="anchor-right">
+                    <span class="span-1">maui</span>
+                    <br/>
+                    <span class="span-2">lahaina - wailea - kaanapali</span>
+                </div>
+            </a>
+            <!--====-->
+            <a href="#">
+                <div class="anchor-left">
+                    <img src="images/home/big_island_icon.png" alt="">
+                </div>
+                <div class="anchor-right">
+                    <span class="span-1">big island</span>
+                    <br/>
+                    <span class="span-2">kona - waikoloa - hilo</span>
+                </div>
+            </a>
+            <!--====-->
+            <a href="#">
+                <div class="anchor-left">
+                    <img src="images/home/kauai_icon.png" alt="">
+                </div>
+                <div class="anchor-right">
+                    <span class="span-1">kauai</span>
+                    <br/>
+                    <span class="span-2">poipu - kapaa - princeville</span>
+                </div>
+            </a>
+            <!--====-->
+        </nav>
     </div>
-<!--- ====== ----->
+    <!--- ====== ----->
     <div class="mid-pane">
-      <h3>popular hawaii activites</h3>
-      <ul class="activity-nav">
-        <li><a id="luau-icon" href="#"><div class="activity-img"></div><span>luaus</span></a></li>
-        <li><a id="dinner-cruise-icon" href="#"><div class="activity-img"></div><span>dinner<br/>cruises</span></a></li>
-        <li><a id="pearl-harbor-icon" href="#"><div class="activity-img"></div><span>pearl<br/>harbor</span></a></li>
-        <li><a id="lei-greeting-icon" href="#"><div class="activity-img"></div><span>lei<br/>greeting</span></a></li>
-        <li><a id="volcano-icon" href="#"><div class="activity-img"></div><span>volcano</span></a></li>
-        <li><a id="helicopter-icon" href="#"><div class="activity-img"></div><span>helicopter</span></a></li>
-      </ul>
-      <!--- ====== ----->
-      <h4>book with confidence</h4>
-      <ul class="coverage-section">
-        <li><button id="coverage-first" type="button" name="button"><div class="coverage-img"></div><span>safe and<br/>secure</span></button></li>
-        <li><button id="coverage-second" type="button" name="button"><div class="coverage-img"></div><span>money back<br/>guarantee</span></button></li>
-        <li><button id="coverage-third" type="button" name="button"><div class="coverage-img"></div><span>same day<br/>reservations</span></button></li>
-        <li><button id="coverage-fourth" type="button" name="button"><div class="coverage-img"></div><span>friendly<br/>support</span></button></li>
-      </ul>
-      <!--- ====== ----->
+        <h3>popular hawaii activites</h3>
+        <ul class="activity-nav">
+            <li><a id="luau-icon" href="#"><div class="activity-img"></div><span>luaus</span></a></li>
+            <li><a id="dinner-cruise-icon" href="#"><div class="activity-img"></div><span>dinner<br />cruises</span></a></li>
+            <li><a id="pearl-harbor-icon" href="#"><div class="activity-img"></div><span>pearl<br />harbor</span></a></li>
+            <li><a id="lei-greeting-icon" href="#"><div class="activity-img"></div><span>lei<br />greeting</span></a></li>
+            <li><a id="volcano-icon" href="#"><div class="activity-img"></div><span>volcano</span></a></li>
+            <li><a id="helicopter-icon" href="#"><div class="activity-img"></div><span>helicopter</span></a></li>
+        </ul>
+        <!--- ====== ----->
+        <h4>book with confidence</h4>
+        <ul class="coverage-section">
+            <li><button id="coverage-first" type="button" name="button" onclick="idToggle('coverage-1', 'active')"><div class="coverage-img"></div><span>safe and<br />secure</span></button></li>
+            <li><button id="coverage-second" type="button" name="button" onclick="idToggle('coverage-2', 'active')"><div class="coverage-img"></div><span>money back<br />guarantee</span></button></li>
+            <li><button id="coverage-third" type="button" name="button" onclick="idToggle('coverage-3', 'active')"><div class="coverage-img"></div><span>same day<br />reservations</span></button></li>
+            <li><button id="coverage-fourth" type="button" name="button" onclick="idToggle('coverage-4', 'active')"><div class="coverage-img"></div><span>friendly<br />support</span></button></li>
+        </ul>
+        <!--- ============= -->
+        <div class="c-dialoge-wrapper" id="coverage-1">
+        <div class="coverage-dialogue">
+            <header>safe and secure booking</header>
+            <article>
+              <p>Our website uses a 128-Bit SSL Encryption on pages where private information can be entered, such as credit cards, addresses, etc. and we monitor the SSL certificates expiration.</p>
+            </article>
+        </div>
+        </div>
+        <!--- ====== ----->
+        <div class="c-dialoge-wrapper" id="coverage-2">
+        <div class="coverage-dialogue">
+            <header>money back guarantee</header>
+            <article>
+             <p>Receive a 100% refund if your plans change for any reason at least 48 hours prior to departure on tours that do not include airfare. Please see cancel policy for activities on the order page for any exceptions. Some activities need 72 hours to cancel and large parties of 6 or more need 72 hours or more. This will also be on your voucher. </p>
+            </article>
+        </div>
+        </div>
+        <!--- ====== ----->
+        <div class="c-dialoge-wrapper" id="coverage-3">
+        <div class="coverage-dialogue">
+            <header>same day reservations</header>
+            <article>
+             <p>Receive your voucher the same day after booking your tour or activity, provided it hasn't sold out or is unavailable, which happens occasionally. Should a tour or activity be unavailable on your preferred date, our sales representative will let you know alternative dates. You may also call our office between the hours of 5:30 am to 5:30 pm HST prior to booking your tour or activity to guarantee immediate assistance.</p>
+            </article>
+        </div>
+        </div>
+        <!--- ====== ----->
+        <div class="c-dialoge-wrapper" id="coverage-4">
+        <div class="coverage-dialogue">
+            <header>friendly support</header>
+            <article>
+               <p>Our sales and service representatives have a complete understanding of how to help customers select the best Hawaii vacation activities, and ensure 100% complete satisfaction. We realize that we are representing one of the world’s most popular vacation destinations and by doing so we are serious about providing cheerful exchanges with our valued customers.</p>
+            </article>
+        </div>
+        </div>
+<!-- ================================================= -->
+<!-- =============| coverage dailogues |============== -->
+<!-- ================================================= -->
     </div>
-</div>
-<!--- ====== ----->
-<div class="checkpoint">
-  <div class="article-wrapper">
-    <div class="article-main">
-      <h2>welcome to hawaii discount</h2>
-      <h3>discount hawaii activites and tours</h3>
-      <article id="article-container">
-        <section id="article-section">
-        <p class="article-bloc">HawaiiDiscount.com is the home of the lowest prices for any Hawaii activity, Hawaii attraction or Hawaii tour on the Internet. There are so many great things to do in Hawaii which sell out weeks to months in advance, so making reservations before you arrive in Hawaii is highly recommended.</p>
-        <p class="article-bloc">It will help you not only save time and money, but you'll be able to relax knowing the planning is complete. Joining a professional Hawaii tour is really a great way to see more of the islands. Choose from hundreds of fun things to do in Hawaii at bargain prices.</p>
-        <p class="article-bloc">We help with all kinds of Hawaii tour itineraries from family vacations, to honeymoon couples, to single person getaway Hawaii tours. Thank you for letting us help plan your perfect dream Hawaiian vacation!</p>
-        </section>
-      </article>
-      <button type="button" name="button" onclick="slideToggle('article-section',true)">next</button>
+
+    <div class="checkpoint">
+        <div class="article-wrapper">
+            <div class="article-main">
+                <h2>welcome to hawaii discount</h2>
+                <h3>discount hawaii activites and tours</h3>
+                <article id="article-container">
+                    <section id="article-section">
+                        <p class="article-bloc">HawaiiDiscount.com is the home of the lowest prices for any Hawaii activity, Hawaii attraction or Hawaii tour on the Internet. There are so many great things to do in Hawaii which sell out weeks to months in advance, so making reservations before you arrive in Hawaii is highly recommended.</p>
+                        <p class="article-bloc">It will help you not only save time and money, but you'll be able to relax knowing the planning is complete. Joining a professional Hawaii tour is really a great way to see more of the islands. Choose from hundreds of fun things to do in Hawaii at bargain prices.</p>
+                        <p class="article-bloc">We help with all kinds of Hawaii tour itineraries from family vacations, to honeymoon couples, to single person getaway Hawaii tours. Thank you for letting us help plan your perfect dream Hawaiian vacation!</p>
+                    </section>
+                </article>
+                <button type="button" name="button" onclick="slideToggle('article-section',true,3)">next</button>
+            </div>
+            <div id="playerWrapper">
+              <div id="player"></div>
+            </div>
+        </div>
     </div>
-  </div>
+    <script>
+//============================================= //
+//=============| Youtube handler|============== //
+//============================================= //
+var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    host: 'https://www.youtube.com',
+                    rel: '0',
+                    videoId: 'HOUXBq9F0QE',
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    },
+                    playerVars: {
+                        rel: 0,
+                        showInfo: 0
+                    }
+                });
+            }
+            function onPlayerReady(event) {
+
+            }
+            function onPlayerStateChange(event) {
+
+            }
+//============================================= //
+    </script>
+    <script type="text/javascript" src="js/home.js"></script>
+
 </div>
-<!--- ====== ----->
-  <footer>
+  
+<footer>
     <section>
-      <div class="footer-col">
+      <div class="footer-col" id="footer-first">
+
       </div>
-      <div class="footer-center">
-        <img src="images/hawaii_discount_logo_new.jpg" alt="">
+      <div class="footer-center" id="footer-second">
+        <img src="images/main/hawaii_discount_logo_new.jpg" alt="" />
+
         <span>Hawaii Islands</span>
-        <a href="#">Oahu Tours</a>
-        <a href="#">Honolulu Tours</a>
-        <a href="#">Maui Tours</a>
-        <a href="#">Kauai Tours</a>
-        <a href="#">Big Island Tours</a>
+        <ul>
+          <li><a href="#">Oahu Tours</a></li>
+          <li><a href="#">Honolulu Tours</a></li>
+          <li><a href="#">Maui Tours</a></li>
+          <li><a href="#">Kauai Tours</a></li>
+          <li><a href="#">Big Island Tours</a></li>
+        </ul>
         <span>quick links</span>
-        <a href="#">Hawaii Car Rentals</a>
-        <a href="#">Hawaii Attractions</a>
-        <a href="#">Hawaii Family Activities</a>
-        <a href="#">Hawaii Honeymoon Activities</a>
-        <a href="#">Hawaii Adventure Activities</a>
-        <a href="#">Hawaii Vendors</a>
-        <a href="#">Hawaii Event Calendar</a>
-        <span>Book with Confidence</span>
-        <p>✓ Secure Checkout</p>
-        <p>✓ Money Back Guarantee</p>
-        <p>✓ Low Price Guarantee</p>
-        <p>✓ No Cancellation Fees</p>
-        <p>✓ Local Experts</p>
-        <p>✓ Friendly Support</p>
-        <span>Contact Info</span>
-        <a href="tel:1-866-482-9775">1-866-482-9775 (Toll Free)</a>
-        <a href="tel:843-883-0798">843-883-0798 (fax)</a>
-        <a href="mailto:sales@hawaiidiscount.com">sales@hawaiidiscount.com</a>
+        <ul>
+          <li><a href="#">Hawaii Car Rentals</a></li>
+          <li><a href="#">Hawaii Attractions</a></li>
+          <li><a href="#">Hawaii Family Activities</a></li>
+          <li><a href="#">Hawaii Honeymoon Activities</a></li>
+          <li><a href="#">Hawaii Adventure Activities</a></li>
+          <li><a href="#">Hawaii Vendors</a></li>
+          <li><a href="#">Hawaii Event Calendar</a></li>
+          <li><a href="/account/login">Login</a></li>
+          <li><a href="http://dev.hawaiidiscount.com:80/?SkinID=1">HawaiiDiscountPublic</a></li>
+        </ul>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" id="footer-third">
+        <span>Contact Info</span>
+        <ul>
+          <li><a href="tel:1-866-482-9775">1-866-482-9775 (Toll Free)</a></li>
+          <li><a href="tel:843-883-0798">843-883-0798 (fax)</a></li>
+          <li><a href="mailto:sales@hawaiidiscount.com">sales@hawaiidiscount.com</a></li>
+        </ul>
+        <div class="social">
+          <a href="#">
+            <img
+              src="images/main/facebook_twitter_youtube_instagram.png"
+              alt=""
+              id="social-fb"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="images/main/facebook_twitter_youtube_instagram.png"
+              alt=""
+              id="social-tw"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="images/main/facebook_twitter_youtube_instagram.png"
+              alt=""
+              id="social-yt"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="images/main/facebook_twitter_youtube_instagram.png"
+              alt=""
+              id="social-ig"
+            />
+          </a>
+        </div>
+        <span>Book with Confidence</span>
+        <ul>
+          <li><p>✓ Secure Checkout</p></li>
+          <li><p>✓ Money Back Guarantee</p></li>
+          <li><p>✓ Low Price Guarantee</p></li>
+          <li><p>✓ No Cancellation Fees</p></li>
+          <li><p>✓ Local Experts</p></li>
+          <li><p>✓ Friendly Support</p></li>
+        </ul>
       </div>
     </section>
+    <div id="footer-bottom">
+      <ul>
+          <li> <a href="/privacy.html">Privacy Policy</a> </li>
+          <li> <a href="/terms.html">Terms</a> </li>
+          <li> <a href="/sitemaps.html">Sitemaps</a> </li>
+          <li> <a href="/account/login">Login</a> </li>
+          <li> <a href="http://dev.hawaiidiscount.com:80/?SkinID=1">HawaiiDiscountPublic</a> </li>
+      </ul>
+    </div>
   </footer>
+
+   </div>
+  <script type="text/javascript" src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
-  <script type="text/javascript" src="scrollSize.js"></script>
-  <script type="text/javascript" src="checkpoint.js"></script>
-  <script type="text/javascript" src="toggle.js"></script>
-  <script type="text/javascript" src="nav.js"></script>
 </html>

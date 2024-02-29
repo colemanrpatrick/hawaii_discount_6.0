@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css" />
+    <meta
+      name="viewport"
+      content="user-scalable = yes, width=320, initial-scale=1"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="/Content/themes/base/css?v=A06O5j6fQJt3flXqt3h9OakkVkTS3y4I6j7nmUz6SU01"
+      rel="stylesheet"
+    />
+    <script src="/bundles/jquery?v=9ktsOtIo0upvJP7-7FiXuOoOJe58RLFJ__wIRPL2vGo1"></script>
+    <script src="/bundles/jqueryui?v=yqCVigxSu97_s_vulMWzX97PVmpAp1RUApV3df4vSeo1"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <title>Hawaii Discount</title>
+  </head>
+  <body>
+    <div id="main">
+      <nav class="main-nav" id="main-nav">
+        <section>
+          <ul>
+            <li class="home">
+              <a href="#"><span>home</span></a>
+            </li>
+            <li>
+              <a class="parentAnchor" href="#">activites</a>
+              <button
+                class="mobileDropDown"
+                type="button"
+                name="button"
+              ></button>
+              <nav class="childNav">
+                <a href="#">Dinner Cruises</a>
+                <a href="#">Dolphin Swims</a>
+                <a href="#">Entertainment</a>
+                <a href="#">Fishing</a>
+                <a href="#">Golf Courses</a>
+                <a href="#">Horseback Riding</a>
+                <a href="#">Kayaking</a>
+                <a href="#">Lei Greetings</a>
+                <a href="#">Luaus</a>
+                <a href="#">Oahu Parasailing</a>
+                <a href="#">Polynesian Cultural Ctr</a>
+                <a href="#">Scuba Diving</a>
+                <a href="#">Sea Life Park</a>
+                <a href="#">Shark Cage Adventures</a>
+                <a href="#">Snorkeling</a>
+                <a href="#">Surfing</a>
+                <a href="#">Ziplines</a>
+              </nav>
+            </li>
+            <li>
+              <a class="parentAnchor" href="#">tours</a>
+              <button
+                class="mobileDropDown"
+                type="button"
+                name="button"
+              ></button>
+              <nav class="childNav">
+                <a href="">ATV Tours</a>
+                <a href="">Helicopter Tours</a>
+                <a href="">Inter-Island Tours</a>
+                <a href="">Kualoa Ranch</a>
+                <a href="">Nature Tours</a>
+                <a href="">Pearl Harbor</a>
+                <a href="">Shore Excursions</a>
+                <a href="">Sightseeing Tours</a>
+                <a href="">Turtle Tours</a>
+                <a href="">Volcano Tours</a>
+                <a href="">Whale Watching</a>
+              </nav>
+            </li>
+            <li>
+              <a class="parentAnchor" href="#">luaus</a>
+              <button
+                class="mobileDropDown"
+                type="button"
+                name="button"
+              ></button>
+              <nav class="childNav">
+                <a href="#">oahu luaus</a>
+                <a href="#">maui luaus</a>
+                <a href="#">kauai luaus</a>
+                <a href="#">big luaus</a>
+              </nav>
+            </li>
+            <li>
+              <a class="parentAnchor" href="#">by island</a>
+              <button
+                class="mobileDropDown"
+                type="button"
+                name="button"
+              ></button>
+              <nav class="childNav">
+                <a href="#">oahu island</a>
+                <a href="#">maui island</a>
+                <a href="#">kauai island</a>
+                <a href="#">big island</a>
+                <a href="#">lanai island</a>
+              </nav>
+            </li>
+            <li><a class="parentAnchor" href="#">groups</a></li>
+            <li><a class="parentAnchor" href="#">about us</a></li>
+            <li><a class="parentAnchor" href="#">blog</a></li>
+            <li style="width: 40px"></li>
+          </ul>
+        </section>
+      </nav>
+      <!-- ===== wrapper ===== -->
+      <div class="wrapper">
+        <div class="masthead">
+          <button
+            type="button"
+            name="button"
+            class="menu-btn"
+            onclick="idToggle('menu-btn','active');idToggle('main-nav','active')"
+            id="menu-btn"
+          >
+            <hr class="menu-btn-hr-1" />
+            <hr class="menu-btn-hr-2" />
+            <hr class="menu-btn-hr-3" />
+          </button>
+          <a href="#" id="cart-btn"
+            ><i class="material-icons">shopping_cart</i></a
+          >
+          <div class="logo">
+            <a href="#"> <img src="images/main/HDnewLogo.png" alt="" /> </a>
+          </div>
+          <div class="blurb">
+            <h1>Discount Hawaii Activities & Tours</h1>
+            <h2>Make Your Vacation Extraordinary</h2>
+          </div>
+          <ul class="phone">
+            <img src="images/main/privacy-guard.png" alt="" />
+            <li>
+              <span>(Toll Free)</span>
+              <a href="tel:1-866-482-9775">1-866-482-9775</a>
+            </li>
+            <li>
+              <span>(Local)</span>
+              <a href="tel:808-892-2082">808-892-2082</a>
+            </li>
+          </ul>
+
+          <button type="button" id="search-btn">
+            <img
+              src="images/main/zoom.png"
+              alt=""
+              onclick="idToggle('searchArea','active')"
+            />
+          </button>
+          <div id="searchArea">
+            <input type="text" placeholder="luaus,tours..." />
+            <button type="button">search</button>
+          </div>
+        </div>
+
+        <!--end navigation-->
+        <!-- ======================= -->
+          <link rel="stylesheet" href="css/products.css">
+
+          <div id="activity-header" style="background: url('images/activities/banners/luaus-oahu-banner.jpg');">
+            <section>
+              <h1>real oahu luaus</h1>
+              <span class="span-1">save up to <b>20%</b> off</span>
+              <span class="span-2">choose a luau below</span>
+            </section>
+          </div>
+
+        <!-- ======================= -->
+
+          <div id="activity-reading" class="hidden">
+            <article class="activity-article active" id="activity-article-1">
+              <h2>oahu luaus</h2>
+                <p>Looking for the best Oahu luau deals on the Internet? On this page you will find the best Oahu luaus with the lowest prices guaranteed! 
+                Oahu luaus are a beloved island tradition and on the to-do list of most visitors to this beautiful Hawaiian island. 
+                A luau is a traditional Hawaiian custom, so if you want to get to know Hawaiian culture, visiting a luau is a great idea. 
+                What all Hawaiian luaus have in common is tasty food. Try popular Polynesian delicacies, such as kalua pig, lomi lomi salmon and island fish, 
+                or savor all-time American favorites - prime rib, chicken, rice and vegetable dishes. The luau buffet offers plenty of choices.<p>
+                <p>The centerpiece of a luau is traditionally the kalua pig, which the ancient Hawaiians cooked in an imu, an underground oven. 
+                Other Hawaiian delicacies are poi (a paste made from taro roots) and lau lau, a dish where pork, beef, fish or chicken is wrapped and 
+                then cooked in taro leaves. The luau feast also includes tropical cocktails and of course dessert, usually a variety of delicious 
+                cakes and haupia, a coconut pudding.</p>
+              <div class="article-buttons">
+                <button type="button" onclick="pageToggle(2,'activity-article')"><span>continue</span><Span Class="material-symbols-outlined">chevron_right</Span></button>
+              </div>
+            </article>
+            <article class="activity-article" id="activity-article-2">
+              <h2>oahu luau experience</h2>
+              <p>But a Hawaiian luau is not just about great food. It’s also about experiencing Hawaiian culture. 
+                Depending on which luau you plan to visit, you’ll get to see cultural demonstrations, games, and arts and crafts. 
+                All luaus also include a show featuring music and dances from Hawaii and greater Polynesia. 
+                Pick your favorite Oahu luau and reserve your seats early. Oahu luaus tend to sell out quickly because they are so popular. 
+                Hawaii Discount offers the best prices on all Oahu luaus!</p>
+                <p>Now for the best part of your Hawaiian luau food. Dessert! 
+                For dessert, most Waikiki luaus typically feature scrumptious cakes, cookies and haupia, which is a tasty coconut pudding. 
+                If you're a fan of coconut, you're going to love haupia!</p>
+              </p>
+              <div class="article-buttons">
+                <button type="button" onclick="pageToggle(1,'activity-article')"><Span Class="material-symbols-outlined">chevron_left</Span><span>back</span></button>
+                <button type="button" onclick="pageToggle(3,'activity-article')"><span>continue</span><Span Class="material-symbols-outlined">chevron_right</Span></button>
+              </div>
+            </article>
+            <article class="activity-article" id="activity-article-3">
+              <h2>about oahu luaus</h2>
+              <p>So what is an Oahu luau all about? An Oahu luau is traditionally a beautiful display of Hawaiian dishes accompanied by fun and exciting live entertainment. 
+              We're talking hula dancers, fire breathers, fire dancers. So much fun to watch! What's even better, or should we say tastier, 
+              is that most luaus even feature the imu ceremony! Ever heard of an imu ceremony? Well, let us wet your taste buds! 
+              This is where they cook roast pig (kalua pua'a) underground! A circular cooking pit is dug out and layers of hot coals, stones, leaves and mats are added, 
+              which create a steamy environment for the roast pig. Then all of it is buried and left to cook for several hours. 
+              The delicious result is very juicy, melt in your mouth pork!</p>
+              <p>The fun doesn't stop there! You can expect other Oahu luau activities, which may include a conch blowing contest or learning to dance the hula. 
+              Make an exotic flower lei or beautiful head band. Witness an impressive torch lighting ceremony. As if this wasn't already a blast, 
+              is there anything cooler than learning to play the ukulele while you're in Hawaii?! We know you'll become an instant star once you do.</p> 
+              <div class="article-buttons">
+                <button type="button" onclick="pageToggle(2,'activity-article')"><Span Class="material-symbols-outlined">chevron_left</Span><span>back</span></button>
+                <button type="button" onclick="pageToggle(1,'activity-article')"><span>return</span><Span Class="material-symbols-outlined">chevron_right</Span></button>
+              </div>
+            </article>
+            <div id="expand">
+              <button id="expand-more"><span class="material-symbols-outlined">expand_more</span><span>expand</span></button>
+              <button id="expand-less" style="display: none;"><span class="material-symbols-outlined">expand_less</span><span>hide</span></button>
+            </div>
+          </div>
+
+          <div class="activity-container">
+                <div Class="activity">
+                  <div Class="activity-title" id="">
+                      <h2 Class="title"><a href="">Aloha Kai Luau - Sea Life Park Hawaii</a></h2>
+                      <h3 Class="sub-title">Honolulu - Oahu</h3>
+                      <div Class="duration">
+                          <Span Class="material-symbols-outlined">hourglass_top</Span><b class="duration-content">3.5 hours</b>
+                      </div>
+                  </div>
+
+                  <div class="ribbon"> 
+                    <div class="ribbon-content"> 
+                      <p>
+                        save<span> up</span><br>
+                        <span>to </span>20%
+                      </p>   
+                    </div> 
+                  </div>
+
+                  <div Class="activity-image">
+                          <img src="images/activities/luaus/alohakai2(1).jpg" alt="Aloha Kai Luau" />
+                  </div>
+                  <div Class="activity-description">
+                      <p>
+                          Backed by sea cliffs and overlooking the ocean, Aloha Kai Luau features a beautiful setting unlike any other luau on Oahu.
+                      </p>
+                  </div>
+                  <ul Class="activity-footer">
+                      <li Class="activity-left">
+                              <p Class="sale-price">135.00</p>
+  
+                      </li>
+                      <li Class="activity-right">
+                          <a Class="activity-anchor" href="/oahu/aloha-kai-luau.htm">
+                              <p>book now</p>
+                              <Span Class="material-symbols-outlined">chevron_right</Span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div Class="activity">
+                  <div Class="activity-title" id="" >
+                      <h2 Class="title"><a href="">Germaine&#39;s Luau - Discount Oahu Luau Tickets Online</a></h2>
+                      <h3 Class="sub-title">Kapolei - Oahu</h3>
+                      <div Class="duration">
+                          <Span Class="material-symbols-outlined">hourglass_top</Span><b class="duration-content"> 3.5 hours</b>
+                      </div>
+                  </div>
+
+                  <div class="ribbon"> 
+                    <div class="ribbon-content"> 
+                      <p>
+                        save<span> up</span><br>
+                        <span>to </span>5%
+                      </p>   
+                    </div> 
+                  </div>
+
+
+                  <div Class="activity-image">
+                          <img src="images/activities/luaus/germaines_show.jpg" alt="Germaine&#39;s Luau" />
+                  </div>
+                  <div Class="activity-description">
+                      <p>
+                          Held on a scenic private beach that overlooks the sunset, Germaine&#39;s Luau offers a laid-back atmosphere. It is a great luau for the whole family! 
+                      </p>
+                  </div>
+                  <ul Class="activity-footer">
+                      <li Class="activity-left">
+                              <p Class="list-price">119.00</p>
+                              <p Class="sale-price">110.02</p>
+  
+                      </li>
+                      <li Class="activity-right">
+                          <a Class="activity-anchor" href="/oahu/germaines-luau.htm">
+                              <p>book now</p>
+                              <Span Class="material-symbols-outlined">chevron_right</Span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div Class="activity">
+                  <div Class="activity-title" id="" >
+                      <h2 Class="title"><a href="">Ka Moana Luau at Aloha Tower</a></h2>
+                      <h3 Class="sub-title">Honolulu - Oahu</h3>
+                      <div Class="duration">
+                          <Span Class="material-symbols-outlined">hourglass_top</Span><b class="duration-content"> 2.5 to 3 hours</b>
+                      </div>
+                  </div>
+
+                  <div class="ribbon"> 
+                    <div class="ribbon-content"> 
+                      <p>
+                        save<span> up</span><br>
+                        <span>to </span>5%
+                      </p>   
+                    </div> 
+                  </div>
+
+
+                  <div Class="activity-image">
+                          <img src="images/activities/luaus/Hawaiian%20Dances%20kam(1).jpg" alt="Ka Moana Luau" />
+                  </div>
+                  <div Class="activity-description">
+                      <p>
+                          Now taking place at its new location at Aloha Tower in the heart of downtown Honolulu, Ka Moana Luau takes you on a voyage through Polynesia with dances, chants and activities from the different islands of the Pacific. 
+                      </p>
+                  </div>
+                  <ul Class="activity-footer">
+                      <li Class="activity-left">
+                              <p Class="list-price">135.08</p>
+                              <p Class="sale-price">112.00</p>
+  
+                      </li>
+                      <li Class="activity-right">
+                          <a Class="activity-anchor" href="/oahu/ka-moana-luau.htm">
+                              <p>book now</p>
+                              <Span Class="material-symbols-outlined">chevron_right</Span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div Class="activity">
+                  <div Class="activity-title" id="" >
+                      <h2 Class="title"><a href="">Experience Nutridge Luau</a></h2>
+                      <h3 Class="sub-title">Honolulu - Oahu</h3>
+                      <div Class="duration">
+                          <Span Class="material-symbols-outlined">hourglass_top</Span><b class="duration-content">4 hours</b>
+                      </div>
+                  </div>
+
+                  <div class="ribbon"> 
+                    <div class="ribbon-content"> 
+                      <p>
+                        save<span> up</span><br>
+                        <span>to </span>5%
+                      </p>   
+                    </div> 
+                  </div>
+
+                  <div Class="activity-image">
+                          <img src="images/activities/luaus/nutridge-luau.jpg" alt="Experience Nutridge Luau" />
+                  </div>
+                  <div Class="activity-description">
+                      <p>
+                          Experience Nutridge Luau is held on a scenic mountaintop at the historic Nutridge Estate, overlooking Honolulu and Waikiki. Its the perfect setting for a traditional Hawaiian luau.
+                      </p>
+                  </div>
+                  <ul Class="activity-footer">
+                      <li Class="activity-left">
+                              <p Class="list-price">185.94</p>
+                              <p Class="sale-price">180.00</p>
+  
+                      </li>
+                      <li Class="activity-right">
+                          <a Class="activity-anchor" href="/oahu/experience-nutridge-luau.htm">
+                              <p>book now</p>
+                              <Span Class="material-symbols-outlined">chevron_right</Span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div Class="activity">
+                  <div Class="activity-title" id="" >
+                      <h2 Class="title"> <a href="">Waikiki Luau at Rock-A-Hula Cabana</a> </h2>
+                      <h3 Class="sub-title">Honolulu - Oahu</h3>
+                      <div Class="duration">
+                          <Span Class="material-symbols-outlined">hourglass_top</Span><b class="duration-content"> 2 hours</b>
+                      </div>
+                  </div>
+                  <div Class="activity-image">
+                          <img src="images/activities/luaus/rock-a-hula-entertainers(1).jpg" alt="Rock-A-Hula" />
+                  </div>
+                  <div Class="activity-description">
+                      <p>
+                          Held in the heart of Waikiki at the Royal Hawaiian Center, the Waikiki Luau is ideal for the whole family. It&#39;s a little shorter luau compared to most others, but includes everything what makes a Hawaiian luau special.
+                      </p>
+                  </div>
+                  <ul Class="activity-footer">
+                      <li Class="activity-left">
+                              <p Class="list-price">96.00</p>
+                              <p Class="sale-price">89.00</p>
+  
+                      </li>
+                      <li Class="activity-right">
+                          <a Class="activity-anchor" href="/oahu/waikiki-luau-at-rock-a-hula-cabana.htm">
+                              <p>book now</p>
+                              <Span Class="material-symbols-outlined">chevron_right</Span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div Class="activity">
+                  <div Class="activity-title" id="" >
+                      <h2 Class="title"><a href="">Polynesian Cultural Center</a></h2>
+                      <h3 Class="sub-title">Laie - Oahu</h3>
+                      <div Class="duration">
+                          <Span Class="material-symbols-outlined">hourglass_top</Span><b class="duration-content">varied</b>
+                      </div>
+                  </div>
+                  <div Class="activity-image">
+                          <img src="images/activities/luaus/tahitian-canoepcc.jpg" alt="Polynesian Cultural Center " />
+                  </div>
+                  <div Class="activity-description">
+                      <p>
+                          The Polynesian Cultural Center is a large, 42-acre open air park where you can completely immerse yourself into the culture, customs and music of Polynesia.
+                      </p>
+                  </div>
+                  <ul Class="activity-footer">
+                      <li Class="activity-left">
+                              <p Class="sale-price">89.95</p>
+  
+                      </li>
+                      <li Class="activity-right">
+                          <a Class="activity-anchor" href="/oahu/admission-polynesian-cultural-center.htm">
+                              <p>book now</p>
+                              <Span Class="material-symbols-outlined">chevron_right</Span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div Class="activity">
+                  <div Class="activity-title" id="" >
+                      <h2 Class="title"><a href="">Toa Luau - Afternoon Show - Waimea Valley</a></h2>
+                      <h3 Class="sub-title">Haleiwa - Oahu</h3>
+                      <div Class="duration">
+                          <Span Class="material-symbols-outlined">hourglass_top</Span><b class="duration-content">3.5 hours</b>
+                      </div>
+                  </div>
+                  <div Class="activity-image">
+                          <img src="images/activities/luaus/toa-cultura--presentations3(2).jpg" alt="Toa Luau" />
+                  </div>
+                  <div Class="activity-description">
+                      <p>
+                          Taking place in lush Waimea Valley on the North Shore of Oahu, Toa Luau invites you to an evening of delicious island-style dining, cultural presentations and a spectacular show.
+                      </p>
+                  </div>
+                  <ul Class="activity-footer">
+                      <li Class="activity-left">
+                              <p Class="list-price">135.00</p>
+                              <p Class="sale-price">124.81</p>
+  
+                      </li>
+                      <li Class="activity-right">
+                          <a Class="activity-anchor" href="/oahu/toa-luau-afternoon-show.htm">
+                              <p>book now</p>
+                              <Span Class="material-symbols-outlined">chevron_right</Span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div Class="activity">
+                  <div Class="activity-title" id="" >
+                      <h2 Class="title"><a href="">Toa Luau Evening Show - Waimea Valley</a></h2>
+                      <h3 Class="sub-title">Haleiwa - Oahu</h3>
+                      <div Class="duration">
+                          <Span Class="material-symbols-outlined">hourglass_top</Span><b class="duration-content">3.5 hours</b>
+                      </div>
+                  </div>
+                  <div Class="activity-image">
+                          <img src="images/activities/luaus/toaluau.jpg" alt="Toa Luau" />
+                  </div>
+                  <div Class="activity-description">
+                      <p>
+                          Taking place in lush Waimea Valley on the North Shore of Oahu, Toa Luau invites you to an evening of delicious island-style dining, cultural presentations and a spectacular show.
+                      </p>
+                  </div>
+                  <ul Class="activity-footer">
+                      <li Class="activity-left">
+                              <p Class="list-price">135.00</p>
+                              <p Class="sale-price">124.81</p>
+  
+                      </li>
+                      <li Class="activity-right">
+                          <a Class="activity-anchor" href="/oahu/toa-luau.htm">
+                              <p>book now</p>
+                              <Span Class="material-symbols-outlined">chevron_right</Span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div Class="activity">
+                  <div Class="activity-title" id="Pa&#39;ina Waikiki - Luau at the Waikiki Beach Marriott" >
+                      <h2 Class="title"> <a href="">Pa&#39;ina Waikiki - Luau at the Waikiki Beach Marriott</a> </h2>
+                      <h3 Class="sub-title">Honolulu - Oahu</h3>
+                      <div Class="duration">
+                          <Span Class="material-symbols-outlined">hourglass_top</Span><b class="duration-content"> 2.5 - 3 hours</b>
+                      </div>
+                  </div>
+                  <div Class="activity-image">
+                          <img src="images/activities/luaus/138A8107.jpg" alt="" />
+                  </div>
+                  <div Class="activity-description">
+                      <p>
+                          Experience a traditional Hawaiian luau in the heart of Waikiki. Pa&#39;ina Waikiki is a unique dinner party Hawaiian luau that brings to life through song and dance the vibrant stories of Waikiki&#39;s legendary eras. 
+                      </p>
+                  </div>
+                  <ul Class="activity-footer">
+                      <li Class="activity-left">
+                              <p Class="sale-price">125.00</p>
+  
+                      </li>
+                      <li Class="activity-right">
+                          <a Class="activity-anchor" href="/oahu/paina-luau.htm">
+                              <p>book now</p>
+                              <Span Class="material-symbols-outlined">chevron_right</Span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+
+          </div>
+        <!-- ======================= -->
+
+        <div id="activity-coverage">
+          <h4>book with confidence</h4>
+          <ul class="coverage-section">
+              <li><button id="coverage-first" type="button" name="button" onclick="idToggle('coverage-1', 'active')"><div class="coverage-img"></div><span>safe and<br />secure</span></button></li>
+              <li><button id="coverage-second" type="button" name="button" onclick="idToggle('coverage-2', 'active')"><div class="coverage-img"></div><span>money back<br />guarantee</span></button></li>
+              <li><button id="coverage-third" type="button" name="button" onclick="idToggle('coverage-3', 'active')"><div class="coverage-img"></div><span>same day<br />reservations</span></button></li>
+              <li><button id="coverage-fourth" type="button" name="button" onclick="idToggle('coverage-4', 'active')"><div class="coverage-img"></div><span>friendly<br />support</span></button></li>
+          </ul>
+          <div class="c-dialoge-wrapper" id="coverage-1">
+            <div class="coverage-dialogue">
+                <header>safe and secure booking</header>
+                <article>
+                  <p>Our website uses a 128-Bit SSL Encryption on pages where private information can be entered, such as credit cards, addresses, etc. and we monitor the SSL certificates expiration.</p>
+                </article>
+            </div>
+            </div>
+            <!--- ====== ----->
+            <div class="c-dialoge-wrapper" id="coverage-2">
+            <div class="coverage-dialogue">
+                <header>money back guarantee</header>
+                <article>
+                 <p>Receive a 100% refund if your plans change for any reason at least 48 hours prior to departure on tours that do not include airfare. Please see cancel policy for activities on the order page for any exceptions. Some activities need 72 hours to cancel and large parties of 6 or more need 72 hours or more. This will also be on your voucher. </p>
+                </article>
+            </div>
+            </div>
+            <!--- ====== ----->
+            <div class="c-dialoge-wrapper" id="coverage-3">
+            <div class="coverage-dialogue">
+                <header>same day reservations</header>
+                <article>
+                 <p>Receive your voucher the same day after booking your tour or activity, provided it hasn't sold out or is unavailable, which happens occasionally. Should a tour or activity be unavailable on your preferred date, our sales representative will let you know alternative dates. You may also call our office between the hours of 5:30 am to 5:30 pm HST prior to booking your tour or activity to guarantee immediate assistance.</p>
+                </article>
+            </div>
+            </div>
+            <!--- ====== ----->
+            <div class="c-dialoge-wrapper" id="coverage-4">
+            <div class="coverage-dialogue">
+                <header>friendly support</header>
+                <article>
+                   <p>Our sales and service representatives have a complete understanding of how to help customers select the best Hawaii vacation activities, and ensure 100% complete satisfaction. We realize that we are representing one of the world’s most popular vacation destinations and by doing so we are serious about providing cheerful exchanges with our valued customers.</p>
+                </article>
+            </div>
+            </div>
+        </div>
+
+        <!-- ======================= -->
+        
+        <footer>
+          <section>
+            <div class="footer-col" id="footer-first">
+
+            </div>
+            <div class="footer-center" id="footer-second">
+              <img src="images/main/hawaii_discount_logo_new.jpg" alt="" />
+
+              <span>Hawaii Islands</span>
+              <ul>
+                <li><a href="#">Oahu Tours</a></li>
+                <li><a href="#">Honolulu Tours</a></li>
+                <li><a href="#">Maui Tours</a></li>
+                <li><a href="#">Kauai Tours</a></li>
+                <li><a href="#">Big Island Tours</a></li>
+              </ul>
+              <span>quick links</span>
+              <ul>
+                <li><a href="#">Hawaii Car Rentals</a></li>
+                <li><a href="#">Hawaii Attractions</a></li>
+                <li><a href="#">Hawaii Family Activities</a></li>
+                <li><a href="#">Hawaii Honeymoon Activities</a></li>
+                <li><a href="#">Hawaii Adventure Activities</a></li>
+                <li><a href="#">Hawaii Vendors</a></li>
+                <li><a href="#">Hawaii Event Calendar</a></li>
+                <li><a href="/account/login">Login</a></li>
+                <li><a href="http://dev.hawaiidiscount.com:80/?SkinID=1">HawaiiDiscountPublic</a></li>
+              </ul>
+            </div>
+            <div class="footer-col" id="footer-third">
+              <span>Contact Info</span>
+              <ul>
+                <li><a href="tel:1-866-482-9775">1-866-482-9775 (Toll Free)</a></li>
+                <li><a href="tel:843-883-0798">843-883-0798 (fax)</a></li>
+                <li><a href="mailto:sales@hawaiidiscount.com">sales@hawaiidiscount.com</a></li>
+              </ul>
+              <div class="social">
+                <a href="#">
+                  <img
+                    src="images/main/facebook_twitter_youtube_instagram.png"
+                    alt=""
+                    id="social-fb"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="images/main/facebook_twitter_youtube_instagram.png"
+                    alt=""
+                    id="social-tw"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="images/main/facebook_twitter_youtube_instagram.png"
+                    alt=""
+                    id="social-yt"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="images/main/facebook_twitter_youtube_instagram.png"
+                    alt=""
+                    id="social-ig"
+                  />
+                </a>
+              </div>
+              <span>Book with Confidence</span>
+              <ul>
+                <li><p>✓ Secure Checkout</p></li>
+                <li><p>✓ Money Back Guarantee</p></li>
+                <li><p>✓ Low Price Guarantee</p></li>
+                <li><p>✓ No Cancellation Fees</p></li>
+                <li><p>✓ Local Experts</p></li>
+                <li><p>✓ Friendly Support</p></li>
+              </ul>
+            </div>
+          </section>
+          <div id="footer-bottom">
+            <ul>
+                <li> <a href="/privacy.html">Privacy Policy</a> </li>
+                <li> <a href="/terms.html">Terms</a> </li>
+                <li> <a href="/sitemaps.html">Sitemaps</a> </li>
+                <li> <a href="/account/login">Login</a> </li>
+                <li> <a href="http://dev.hawaiidiscount.com:80/?SkinID=1">HawaiiDiscountPublic</a> </li>
+            </ul>
+          </div>
+        </footer>
+        <script type="text/javascript" src="js/toggle.js"></script>
+        <script type="text/javascript" src="js/nav.js"></script>
+        <script src="js/main.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
