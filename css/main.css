@@ -1425,3 +1425,8 @@ footer li {
     font-size: 1.5em;
   }
 }
+#video-container {
+	text-align: center;
+	padding: 1em;
+	border-top: 0.15em solid #00a00e;
+}
