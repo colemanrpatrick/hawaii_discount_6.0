@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/main.css" />
+  <meta name="viewport" content="user-scalable = yes, width=320, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Hawaii Discount</title>
+</head>
+
+<body>
+  <div id="main">
+    <nav class="main-nav" id="main-nav">
+      <section>
+        <ul>
+          <li class="home">
+            <a href="#"><span>home</span></a>
+          </li>
+          <li>
+            <a class="parentAnchor" href="/categoryindex.html">activites</a>
+            <button class="mobileDropDown" type="button" name="button"></button>
+            <nav class="childNav">
+              <a href="#">Dinner Cruises</a>
+              <a href="#">Dolphin Swims</a>
+              <a href="#">Entertainment</a>
+              <a href="#">Fishing</a>
+              <a href="#">Golf Courses</a>
+              <a href="#">Horseback Riding</a>
+              <a href="#">Kayaking</a>
+              <a href="#">Lei Greetings</a>
+              <a href="#">Luaus</a>
+              <a href="#">Oahu Parasailing</a>
+              <a href="#">Polynesian Cultural Ctr</a>
+              <a href="#">Scuba Diving</a>
+              <a href="#">Sea Life Park</a>
+              <a href="#">Shark Cage Adventures</a>
+              <a href="#">Snorkeling</a>
+              <a href="#">Surfing</a>
+              <a href="#">Ziplines</a>
+            </nav>
+          </li>
+          <li>
+            <a class="parentAnchor" href="#">tours</a>
+            <button class="mobileDropDown" type="button" name="button"></button>
+            <nav class="childNav">
+              <a href="">ATV Tours</a>
+              <a href="">Helicopter Tours</a>
+              <a href="">Inter-Island Tours</a>
+              <a href="">Kualoa Ranch</a>
+              <a href="">Nature Tours</a>
+              <a href="">Pearl Harbor</a>
+              <a href="">Shore Excursions</a>
+              <a href="">Sightseeing Tours</a>
+              <a href="">Turtle Tours</a>
+              <a href="">Volcano Tours</a>
+              <a href="">Whale Watching</a>
+            </nav>
+          </li>
+          <li>
+            <a class="parentAnchor" href="#">luaus</a>
+            <button class="mobileDropDown" type="button" name="button"></button>
+            <nav class="childNav">
+              <a href="#">oahu luaus</a>
+              <a href="#">maui luaus</a>
+              <a href="#">kauai luaus</a>
+              <a href="#">big luaus</a>
+            </nav>
+          </li>
+          <li>
+            <a class="parentAnchor" href="#">by island</a>
+            <button class="mobileDropDown" type="button" name="button"></button>
+            <nav class="childNav">
+              <a href="#">oahu island</a>
+              <a href="#">maui island</a>
+              <a href="#">kauai island</a>
+              <a href="#">big island</a>
+              <a href="#">lanai island</a>
+            </nav>
+          </li>
+          <li><a class="parentAnchor" href="#">groups</a></li>
+          <li><a class="parentAnchor" href="#">about us</a></li>
+          <li><a class="parentAnchor" href="#">blog</a></li>
+          <li style="width: 40px"></li>
+        </ul>
+      </section>
+    </nav>
+    <!-- ===== wrapper ===== -->
+    <div class="wrapper">
+      <div class="masthead">
+        <button type="button" name="button" class="menu-btn"
+          onclick="idToggle('menu-btn','active');idToggle('main-nav','active')" id="menu-btn">
+          <hr class="menu-btn-hr-1" />
+          <hr class="menu-btn-hr-2" />
+          <hr class="menu-btn-hr-3" />
+        </button>
+        <a href="#" id="cart-btn"><i class="material-icons">shopping_cart</i></a>
+        <div class="logo">
+          <a href="#"> <img src="images/main/HDnewLogo.png" alt="" /> </a>
+        </div>
+        <div class="blurb">
+          <h1>Discount Hawaii Activities & Tours</h1>
+          <h2>Make Your Vacation Extraordinary</h2>
+        </div>
+        <ul class="phone">
+          <img src="images/main/privacy-guard.png" alt="" />
+          <li>
+            <span>(Toll Free)</span>
+            <a href="tel:1-866-482-9775">1-866-482-9775</a>
+          </li>
+          <li>
+            <span>(Local)</span>
+            <a href="tel:808-892-2082">808-892-2082</a>
+          </li>
+        </ul>
+
+        <button type="button" id="search-btn">
+          <img src="images/main/zoom.png" alt="" onclick="idToggle('searchArea','active')" />
+        </button>
+        <div id="searchArea">
+          <input type="text" placeholder="activitys,tours..." />
+          <button type="button">search</button>
+        </div>
+      </div>
+
+      <!--end navigation-->
+      <!-- ======================= -->
+      <link rel="stylesheet" href="css/products.css">
+
+        <div id="activity-header" class="blank" style="background: url('images/activities/banners/luaus-oahu-banner.jpg');"></div>
+
+        <div id="product-content">
+          <div id="product-main">
+            <h1 id="product-header">title goes here (ex. aloha kai luau)</h1>
+            <h2 id="product-subtitle">“subtitle Goes Here (ex. at Sealife Park oahu )”</h2>
+            <ul id="product-features">
+              <li><span class="material-symbols-outlined">check_circle</span><span>live music</span></li>
+              <li><span class="material-symbols-outlined">check_circle</span><span>entertainment</span></li>
+              <li><span class="material-symbols-outlined">check_circle</span><span>culture</span></li>
+              <li><span class="material-symbols-outlined">check_circle</span><span>dinner</span></li>
+              <li><span class="material-symbols-outlined">check_circle</span><span>cocktails</span></li>
+            </ul>
+            <p class="product-duration"><span class="material-symbols-outlined">schedule</span><span>Duration: Approximately 2 hours</span></p>
+            <ul id="product-prices">
+              <li> <p id="before-price">was <span>$141.36</span> </p> </li>
+              <li> <p id="after-price">now <span>$121.50</span> </p> </li>
+            </ul>
+            <div id="product-buttons">
+              <button type="button" id="product-button" onclick="setReservationWindow();">
+                <p>book now</p>
+                <Span Class="material-symbols-outlined">chevron_right</Span>
+              </a>
+            </div>
+          </div>
+          <div id="player-wrapper">
+            <iframe src="https://www.youtube.com/embed/d9n_3Tj_dlA?autoplay=1&amp;rel=0"></iframe>
+          </div>
+        </div>
+
+        <button id="book-now-alt" class="hidden" onclick="setReservationWindow();">book now<span class="material-symbols-outlined">calendar_month</span>
+        </button>
+
+        <ul id="activity-gallery">
+          <li> <a href="images/activities/luaus/alohakailuau/25.JPG" class="gallery-image" target="_blank" alt=""></a> </li>
+          <li> <a href="images/activities/luaus/alohakailuau/alohakai1.jpg" class="gallery-image" target="_blank" alt=""></a> </li>
+          <li> <a href="images/activities/luaus/alohakailuau/alohakai4.jpg" class="gallery-image" target="_blank" alt=""></a> </li>
+          <li> <a href="images/activities/luaus/alohakailuau/MP_sealife_park_2018_2287.jpg" class="gallery-image" target="_blank" alt=""></a> </li>
+          <li> <a href="images/activities/luaus/alohakailuau/MP_sealife_park_2018_3238.jpg" class="gallery-image" target="_blank" alt=""></a> </li>
+          <li> <a href="images/activities/luaus/alohakailuau/YGn7Bio7.jpg" class="gallery-image" target="_blank" alt=""></a> </li>
+      </ul>
+
+
+        <div class="activity-details">
+          <div id="activity-article">
+            <p>
+              <font size="4" color="#800080"><b>Special Promo - Save 10% off Bronze, 20% off Silver and 10% off
+                  Gold!</b></font><br><br>Backed by sea cliffs and overlooking the ocean, Aloha Kai Luau features a
+              beautiful setting unlike any other luau on Oahu. Held right next to Sea Life Park Hawaii, Aloha Kai Luau
+              invites you to experience a traditional Hawaiian luau- a memorable evening filled with delicious foods and
+              island-style entertainment.<br><br>
+            </p>
+            <p>Upon arrival, you'll be warmly welcomed with a Hawaiian lei and can then watch or participate in a
+              variety of cultural presentations, including a hula or ukulele lesson, flower lei making, coconut headband
+              weaving and Polynesian tattoos. There will also be several mini-performances, including coconut tree
+              climbing and a coconut demonstration.<br><br></p>
+            <p>Then sit down to a mouthwatering Hawaiian luau dinner. On the menu are a wide variety of delicious foods
+              (see menu below). Dinner is followed by a spectacular Polynesian show featuring an award-winning cast,
+              highlighting the vibrant traditions of Hawaii and the love of the sea as you are taken on a voyage across
+              Polynesia. The show culminates with a sword of fire!</p>
+            <p>
+              <font size="4" color="#008000"><b>Aloha Kai Luau Packages:</b></font><br>
+            </p>
+            <p align="center"><img alt="" src="https://www.hawaiidiscount.com/Portals/0/aloha-kai-luau-3.jpg"
+                style="width:100%; max-width:608px" border="0"></p>*Sea Life Park admission included in luau package (5
+            day pass for Silver Package and 10 day pass for Gold and VIP Packages). <br>*Souvenir photo is digital with
+            the option to purchase a physical copy.<br> <br>
+            <div class="bulletpoint-row">
+              <p class="bulletpoint-header"><strong>Aloha Kai Luau Menu:</strong><br></p>
+              <p class="bulletpoint-header"><strong>Greens and Salads:</strong></p>
+              <ul class="bulletpointstyles">
+                <li>Tossed Greens (Asian or Ranch Dressing)</li>
+                <li>Seasonal Salad<br></li>
+                <li>Fresh Pineapple</li>
+                <li>Traditional Poi</li>
+                <li>Lomi Lomi Salmon</li>
+              </ul>
+              <p class="bulletpoint-header"><strong>Starch options:</strong></p>
+              <ul class="bulletpointstyles">
+                <li>Sweet Rolls</li>
+                <li>Sweet Potatoes</li>
+                <li>White Rice</li>
+              </ul>
+              <p class="bulletpoint-header"><strong>Main Dishes:</strong></p>
+              <ul class="bulletpointstyles">
+                <li>Kalua Pork</li>
+                <li>Teriyaki Chicken</li>
+                <li>Fresh Island Catch</li>
+                <li>Vegetable Curry<br></li>
+                <li>Chow Mein Noodles</li>
+                <li>Steamed Vegetables</li>
+              </ul>
+              <p class="bulletpoint-header"><strong>Dessert:</strong></p>
+              <ul class="bulletpointstyles">
+                <li>Assorted Dessert Cakes</li>
+              </ul>
+              <p class="bulletpoint-header"><strong>Beverages:</strong></p>
+              <ul class="bulletpointstyles">
+                <li>Coffee</li>
+                <li>Hot Tea</li>
+                <li>Fruit Punch</li>
+              </ul>
+              <p class="bulletpoint-header"><strong>Bar Menu:</strong></p>
+              <ul class="bulletpointstyles">
+                <li>Island Mai Tais</li>
+                <li>Salmon Creek Chardonnay, Merlot, White Zinfandel</li>
+                <li>Domestic Beers: Budweiser and Bud Light</li>
+                <li>Soft Drinks: Coke, Diet Coke, Sprite</li>
+              </ul>
+            </div>
+            <p><br>Please note: Menu is subject to change without notice. Additional drinks may be featured on some
+              evenings. <br></p>
+          </div>
+
+          <div id="activity-info">
+          </div>
+        </div>
+
+      <script>
+        const emailName = '';
+        const emailPhone = '';
+      </script>
+
+      <script>
+        let cartData = { "ProductID": 24, "ProductKey": "2341", "ProductTitle": "Aloha Kai Luau - Sea Life Park Hawaii", "ProductOrderKey": "2341", "Prices": [{ "ID": 14, "ControlName": "price_2341_14", "Key": "9595", "Description": "Bronze - Per Adult (13 yrs+)", "Limit": -1, "Quantity": 0, "ListPrice": 141.36, "Saleprice": 121.50, "DisplayOrder": 1, "Active": true, "Exempt": false, "Hidden": false, "Category": "Adult", "Grouping": "Bronze Package", "Availability": { "CollectorName": "Activity Date", "ReferenceControl": "ActivityDate_2341", "ClosedDates": "[\"\"]", "Cutoff": "" } }, { "ID": 16, "ControlName": "price_2341_16", "Key": "9597", "Description": "Bronze - Per Child (4-12 yrs)", "Limit": -1, "Quantity": 0, "ListPrice": 115.18, "Saleprice": 99.00, "DisplayOrder": 2, "Active": true, "Exempt": false, "Hidden": false, "Category": "Child", "Grouping": "Bronze Package", "Availability": { "CollectorName": "Activity Date", "ReferenceControl": "ActivityDate_2341", "ClosedDates": "[\"\"]", "Cutoff": "" } }, { "ID": 17, "ControlName": "price_2341_17", "Key": "9598", "Description": "Silver - Per Adult (13 yrs+)", "Limit": -1, "Quantity": 0, "ListPrice": 183.25, "Saleprice": 140.00, "DisplayOrder": 3, "Active": true, "Exempt": false, "Hidden": false, "Category": "Adult", "Grouping": "Silver Package", "Availability": { "CollectorName": "Activity Date", "ReferenceControl": "ActivityDate_2341", "ClosedDates": "[\"\"]", "Cutoff": "" } }, { "ID": 19, "ControlName": "price_2341_19", "Key": "9600", "Description": "Silver - Per Child (4-12 yrs)", "Limit": -1, "Quantity": 0, "ListPrice": 157.07, "Saleprice": 120.00, "DisplayOrder": 4, "Active": true, "Exempt": false, "Hidden": false, "Category": "Child", "Grouping": "Silver Package", "Availability": { "CollectorName": "Activity Date", "ReferenceControl": "ActivityDate_2341", "ClosedDates": "[\"\"]", "Cutoff": "" } }, { "ID": 20, "ControlName": "price_2341_20", "Key": "9601", "Description": "Gold - Per Adult (13 yrs+)", "Limit": -1, "Quantity": 0, "ListPrice": 219.90, "Saleprice": 189.00, "DisplayOrder": 5, "Active": true, "Exempt": false, "Hidden": false, "Category": "Adult", "Grouping": "Gold Package", "Availability": { "CollectorName": "Activity Date", "ReferenceControl": "ActivityDate_2341", "ClosedDates": "[\"\"]", "Cutoff": "" } }, { "ID": 22, "ControlName": "price_2341_22", "Key": "9603", "Description": "Gold - Per Child (4-12 yrs)", "Limit": -1, "Quantity": 0, "ListPrice": 193.72, "Saleprice": 166.50, "DisplayOrder": 6, "Active": true, "Exempt": false, "Hidden": false, "Category": "Child", "Grouping": "Gold Package", "Availability": { "CollectorName": "Activity Date", "ReferenceControl": "ActivityDate_2341", "ClosedDates": "[\"\"]", "Cutoff": "" } }, { "ID": 23, "ControlName": "price_2341_23", "Key": "9604", "Description": "Any Package - Per Lap Child (0-3 yrs)", "Limit": -1, "Quantity": 0, "ListPrice": 0.00, "Saleprice": 0.00, "DisplayOrder": 10, "Active": true, "Exempt": false, "Hidden": false, "Category": "Infant", "Grouping": null, "Availability": { "CollectorName": "Activity Date", "ReferenceControl": "ActivityDate_2341", "ClosedDates": "[\"\"]", "Cutoff": "" } }, { "ID": 24, "ControlName": "price_2341_24", "Key": "9605", "Description": "Early Pick-Up: Waikiki Roundtrip Transportation - Per Person (4 yrs+)", "Limit": -1, "Quantity": 0, "ListPrice": 30.00, "Saleprice": 0.00, "DisplayOrder": 11, "Active": true, "Exempt": false, "Hidden": false, "Category": "Add Ons", "Grouping": null, "Availability": { "CollectorName": "Activity Date", "ReferenceControl": "ActivityDate_2341", "ClosedDates": "[\"\"]", "Cutoff": "" } }, { "ID": 185, "ControlName": "price_2341_185", "Key": "9606", "Description": "Late Pick-Up: Waikiki Roundtrip Transportation - Per Person (4 yrs+)", "Limit": -1, "Quantity": 0, "ListPrice": 30.00, "Saleprice": 0.00, "DisplayOrder": 12, "Active": true, "Exempt": false, "Hidden": false, "Category": "Add Ons", "Grouping": null, "Availability": { "CollectorName": "", "ReferenceControl": "ActivityDate_2341", "ClosedDates": null, "Cutoff": null } }, { "ID": 202, "ControlName": "price_2341_202", "Key": "6000", "Description": "VIP - Per Adult (13 yrs+)", "Limit": -1, "Quantity": 0, "ListPrice": 230.00, "Saleprice": 0.00, "DisplayOrder": 7, "Active": true, "Exempt": false, "Hidden": false, "Category": "Adult", "Grouping": "VIP Package", "Availability": { "CollectorName": "Activity Date", "ReferenceControl": "ActivityDate_2341", "ClosedDates": "[\"02/29/2024\",\"03/01/2024\"]", "Cutoff": "" } }, { "ID": 203, "ControlName": "price_2341_203", "Key": "6001", "Description": "VIP - Per Child (4-12 yrs)", "Limit": -1, "Quantity": 0, "ListPrice": 205.00, "Saleprice": 0.00, "DisplayOrder": 8, "Active": true, "Exempt": false, "Hidden": false, "Category": "Child", "Grouping": "VIP Package", "Availability": { "CollectorName": "Activity Date", "ReferenceControl": "ActivityDate_2341", "ClosedDates": "[\"02/29/2024\",\"03/01/2024\"]", "Cutoff": "" } }], "Availabilities": [{ "CollectorName": "Activity Date", "ReferenceControl": "ActivityDate_2341", "ClosedDates": "[\"03/05/2024\",\"03/12/2024\",\"03/19/2024\",\"03/26/2024\",\"04/02/2024\",\"04/09/2024\",\"04/16/2024\",\"04/23/2024\",\"04/30/2024\",\"05/07/2024\",\"05/14/2024\",\"05/21/2024\",\"05/28/2024\",\"06/04/2024\",\"06/11/2024\",\"06/18/2024\",\"06/25/2024\",\"07/02/2024\",\"07/09/2024\",\"07/16/2024\",\"07/23/2024\",\"07/30/2024\",\"08/06/2024\",\"08/13/2024\",\"08/20/2024\",\"08/27/2024\",\"09/03/2024\",\"09/10/2024\",\"09/17/2024\",\"09/24/2024\",\"10/01/2024\",\"10/08/2024\",\"10/15/2024\",\"10/22/2024\",\"10/29/2024\",\"11/05/2024\",\"11/12/2024\",\"11/19/2024\",\"11/26/2024\",\"12/03/2024\",\"12/10/2024\",\"12/17/2024\",\"12/24/2024\",\"12/31/2024\",\"01/07/2025\",\"01/14/2025\",\"01/21/2025\",\"01/28/2025\",\"02/04/2025\",\"02/11/2025\",\"02/18/2025\",\"02/25/2025\",\"03/02/2024\",\"03/09/2024\",\"03/16/2024\",\"03/23/2024\",\"03/30/2024\",\"04/06/2024\",\"04/13/2024\",\"04/20/2024\",\"04/27/2024\",\"05/04/2024\",\"05/11/2024\",\"05/18/2024\",\"05/25/2024\",\"06/01/2024\",\"06/08/2024\",\"06/15/2024\",\"06/22/2024\",\"06/29/2024\",\"07/06/2024\",\"07/13/2024\",\"07/20/2024\",\"07/27/2024\",\"08/03/2024\",\"08/10/2024\",\"08/17/2024\",\"08/24/2024\",\"08/31/2024\",\"09/07/2024\",\"09/14/2024\",\"09/21/2024\",\"09/28/2024\",\"10/05/2024\",\"10/12/2024\",\"10/19/2024\",\"10/26/2024\",\"11/02/2024\",\"11/09/2024\",\"11/16/2024\",\"11/23/2024\",\"11/30/2024\",\"12/07/2024\",\"12/14/2024\",\"12/21/2024\",\"12/28/2024\",\"01/04/2025\",\"01/11/2025\",\"01/18/2025\",\"01/25/2025\",\"02/01/2025\",\"02/08/2025\",\"02/15/2025\",\"02/22/2025\",\"03/01/2025\"]", "Cutoff": "2:30 PM" }], "Collectors": [{ "ID": 0, "ControlName": "ActivityDate_2341", "ApplicationDataType": 2, "ListMember": null, "Name": "Activity Date", "DisplayOrder": 0, "DisplayAlias": null, "Value": null, "Required": false }, { "ID": 0, "ControlName": "ParticipantNamesandAges_2341", "ApplicationDataType": 0, "ListMember": null, "Name": "Participant Names and Ages", "DisplayOrder": 0, "DisplayAlias": "Party Name", "Value": null, "Required": false }, { "ID": 0, "ControlName": "SelectYourOahuHotel_2341", "ApplicationDataType": 7, "ListMember": { "ID": 5, "ControlName": null, "Shortcode": "Select Your Oahu Hotel", "Code": "Select Your Oahu Hotel", "Selected": false, "Value": "", "ListMembers": [{ "ID": 95, "ControlName": null, "Shortcode": "-- Select --", "Code": "-- Select --", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 96, "ControlName": null, "Shortcode": "Ala Moana Hotel", "Code": "Ala Moana Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 97, "ControlName": null, "Shortcode": "Aloha Surf", "Code": "Aloha Surf", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 98, "ControlName": null, "Shortcode": "Aloha Tower Marketplace", "Code": "Aloha Tower Marketplace", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 99, "ControlName": null, "Shortcode": "Alohilani Resort Waikiki Beach", "Code": "Alohilani Resort Waikiki Beach", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 100, "ControlName": null, "Shortcode": "Ambassador Hotel", "Code": "Ambassador Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 101, "ControlName": null, "Shortcode": "Aqua Coconut Plaza", "Code": "Aqua Coconut Plaza", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 102, "ControlName": null, "Shortcode": "Aqua Lotus", "Code": "Aqua Lotus", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 103, "ControlName": null, "Shortcode": "Aqua Oasis", "Code": "Aqua Oasis", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 104, "ControlName": null, "Shortcode": "Aqua Palms", "Code": "Aqua Palms", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 105, "ControlName": null, "Shortcode": "Aqua Pearl", "Code": "Aqua Pearl", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 106, "ControlName": null, "Shortcode": "Aqua Waikiki Wave", "Code": "Aqua Waikiki Wave", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 107, "ControlName": null, "Shortcode": "Aston Executive Center", "Code": "Aston Executive Center", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 108, "ControlName": null, "Shortcode": "Aston Waikiki Beach Hotel", "Code": "Aston Waikiki Beach Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 109, "ControlName": null, "Shortcode": "Aston Waikiki Beach Tower", "Code": "Aston Waikiki Beach Tower", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 110, "ControlName": null, "Shortcode": "Aston Waikiki Beachside", "Code": "Aston Waikiki Beachside", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 111, "ControlName": null, "Shortcode": "Aston Waikiki Circle", "Code": "Aston Waikiki Circle", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 112, "ControlName": null, "Shortcode": "Aston Waikiki Parkside", "Code": "Aston Waikiki Parkside", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 113, "ControlName": null, "Shortcode": "Aston Waikiki Sunset", "Code": "Aston Waikiki Sunset", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 114, "ControlName": null, "Shortcode": "Aulani Disney Resort", "Code": "Aulani Disney Resort", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 115, "ControlName": null, "Shortcode": "Bamboo Waikiki Hotel", "Code": "Bamboo Waikiki Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 116, "ControlName": null, "Shortcode": "Best Western Airport", "Code": "Best Western Airport", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 117, "ControlName": null, "Shortcode": "Cabana at Waikiki", "Code": "Cabana at Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 118, "ControlName": null, "Shortcode": "Coconut Waikiki", "Code": "Coconut Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 119, "ControlName": null, "Shortcode": "Courtyard By Marriott", "Code": "Courtyard By Marriott", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 120, "ControlName": null, "Shortcode": "Cruise Ship", "Code": "Cruise Ship", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 121, "ControlName": null, "Shortcode": "Diamond Head Beach", "Code": "Diamond Head Beach", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 122, "ControlName": null, "Shortcode": "Double Tree Alana Waikiki", "Code": "Double Tree Alana Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 123, "ControlName": null, "Shortcode": "Embassy Suites", "Code": "Embassy Suites", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 124, "ControlName": null, "Shortcode": "Equus Hotel (Former Hawaii Polo Inn)", "Code": "Equus Hotel (Former Hawaii Polo Inn)", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 125, "ControlName": null, "Shortcode": "Ewa Waikiki", "Code": "Ewa Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 126, "ControlName": null, "Shortcode": "Fairway Villa", "Code": "Fairway Villa", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 127, "ControlName": null, "Shortcode": "Grand Islander", "Code": "Grand Islander", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 128, "ControlName": null, "Shortcode": "Grand Waikikian", "Code": "Grand Waikikian", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 129, "ControlName": null, "Shortcode": "Hale Koa", "Code": "Hale Koa", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 130, "ControlName": null, "Shortcode": "Halekulani Hotel", "Code": "Halekulani Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 131, "ControlName": null, "Shortcode": "Hawaii Prince Hotel", "Code": "Hawaii Prince Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 132, "ControlName": null, "Shortcode": "Hawaiian King", "Code": "Hawaiian King", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 133, "ControlName": null, "Shortcode": "Hawaiian Monarch", "Code": "Hawaiian Monarch", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 134, "ControlName": null, "Shortcode": "Hawaiian Princess", "Code": "Hawaiian Princess", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 135, "ControlName": null, "Shortcode": "Hawaiiana Hotel", "Code": "Hawaiiana Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 136, "ControlName": null, "Shortcode": "Hilton Garden Inn Waikiki Beach", "Code": "Hilton Garden Inn Waikiki Beach", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 137, "ControlName": null, "Shortcode": "Hilton Hawaiian Village", "Code": "Hilton Hawaiian Village", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 138, "ControlName": null, "Shortcode": "Hilton Waikiki Beach (Prince Kuhio)", "Code": "Hilton Waikiki Beach (Prince Kuhio)", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 139, "ControlName": null, "Shortcode": "Hokele Suites", "Code": "Hokele Suites", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 140, "ControlName": null, "Shortcode": "Hokulani", "Code": "Hokulani", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 141, "ControlName": null, "Shortcode": "Hokulani Waikiki", "Code": "Hokulani Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 142, "ControlName": null, "Shortcode": "Holiday Inn Express Honolulu-Waikiki", "Code": "Holiday Inn Express Honolulu-Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 143, "ControlName": null, "Shortcode": "Holiday Inn Waikiki Beachcomber", "Code": "Holiday Inn Waikiki Beachcomber", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 144, "ControlName": null, "Shortcode": "Holiday Surf Hotel", "Code": "Holiday Surf Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 145, "ControlName": null, "Shortcode": "Hostel International Waikiki ", "Code": "Hostel International Waikiki ", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 146, "ControlName": null, "Shortcode": "Hotel La Croix", "Code": "Hotel La Croix", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 147, "ControlName": null, "Shortcode": "Hotel Renew", "Code": "Hotel Renew", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 148, "ControlName": null, "Shortcode": "Hyatt Centric Waikiki", "Code": "Hyatt Centric Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 149, "ControlName": null, "Shortcode": "Hyatt Place Waikiki", "Code": "Hyatt Place Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 150, "ControlName": null, "Shortcode": "Hyatt Regency-Oahu", "Code": "Hyatt Regency-Oahu", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 151, "ControlName": null, "Shortcode": "Ihilani Spa Resort - JW Marriott", "Code": "Ihilani Spa Resort - JW Marriott", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 152, "ControlName": null, "Shortcode": "Ilikai Hotel", "Code": "Ilikai Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 153, "ControlName": null, "Shortcode": "Ilima Hotel", "Code": "Ilima Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 154, "ControlName": null, "Shortcode": "Imperial Waikiki", "Code": "Imperial Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 155, "ControlName": null, "Shortcode": "Inn on the Park", "Code": "Inn on the Park", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 156, "ControlName": null, "Shortcode": "Island Colony", "Code": "Island Colony", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 157, "ControlName": null, "Shortcode": "Kahala Hotel and Resort", "Code": "Kahala Hotel and Resort", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 158, "ControlName": null, "Shortcode": "Ko`Olina Beach Club", "Code": "Ko`Olina Beach Club", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 159, "ControlName": null, "Shortcode": "Ko`Olina Beach Villas Resort", "Code": "Ko`Olina Beach Villas Resort", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 160, "ControlName": null, "Shortcode": "Kuhio Banyan", "Code": "Kuhio Banyan", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 161, "ControlName": null, "Shortcode": "Kuhio Village Resort", "Code": "Kuhio Village Resort", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 162, "ControlName": null, "Shortcode": "Local Residence", "Code": "Local Residence", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 163, "ControlName": null, "Shortcode": "Lotus At Diamond Head", "Code": "Lotus At Diamond Head", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 164, "ControlName": null, "Shortcode": "Luana Waikiki", "Code": "Luana Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 165, "ControlName": null, "Shortcode": "Marina Tower Waikiki", "Code": "Marina Tower Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 166, "ControlName": null, "Shortcode": "Marine Surf Hotel", "Code": "Marine Surf Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 167, "ControlName": null, "Shortcode": "Miramar Hotel", "Code": "Miramar Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 168, "ControlName": null, "Shortcode": "New Otani Kaimana Beach", "Code": "New Otani Kaimana Beach", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 169, "ControlName": null, "Shortcode": "Ocean Resort", "Code": "Ocean Resort", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 170, "ControlName": null, "Shortcode": "Ohana East Hotel", "Code": "Ohana East Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 171, "ControlName": null, "Shortcode": "Ohana Honolulu Airport Hotel", "Code": "Ohana Honolulu Airport Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 172, "ControlName": null, "Shortcode": "Ohana Islander Waikiki", "Code": "Ohana Islander Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 173, "ControlName": null, "Shortcode": "Ohana Malia", "Code": "Ohana Malia", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 174, "ControlName": null, "Shortcode": "Ohia Waikiki Hotel", "Code": "Ohia Waikiki Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 175, "ControlName": null, "Shortcode": "Other", "Code": "Other", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 176, "ControlName": null, "Shortcode": "Outrigger Reef", "Code": "Outrigger Reef", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 177, "ControlName": null, "Shortcode": "Outrigger Regency on Beachwalk", "Code": "Outrigger Regency on Beachwalk", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 178, "ControlName": null, "Shortcode": "Outrigger Waikiki Main", "Code": "Outrigger Waikiki Main", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 179, "ControlName": null, "Shortcode": "Pacific Monarch", "Code": "Pacific Monarch", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 180, "ControlName": null, "Shortcode": "Pagoda Hotel", "Code": "Pagoda Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 181, "ControlName": null, "Shortcode": "Park Shore", "Code": "Park Shore", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 182, "ControlName": null, "Shortcode": "Pearl Hotel Waikiki", "Code": "Pearl Hotel Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 183, "ControlName": null, "Shortcode": "Polynesian Plaza", "Code": "Polynesian Plaza", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 184, "ControlName": null, "Shortcode": "Queen Kapiolani", "Code": "Queen Kapiolani", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 185, "ControlName": null, "Shortcode": "Ramada Waikiki", "Code": "Ramada Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 186, "ControlName": null, "Shortcode": "Ritz-Carlton Residences", "Code": "Ritz-Carlton Residences", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 187, "ControlName": null, "Shortcode": "Royal Aloha Vacation Club (Oahu)", "Code": "Royal Aloha Vacation Club (Oahu)", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 188, "ControlName": null, "Shortcode": "Royal Garden", "Code": "Royal Garden", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 189, "ControlName": null, "Shortcode": "Royal Grove Hotel", "Code": "Royal Grove Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 190, "ControlName": null, "Shortcode": "Royal Hawaiian", "Code": "Royal Hawaiian", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 191, "ControlName": null, "Shortcode": "Royal Kuhio", "Code": "Royal Kuhio", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 192, "ControlName": null, "Shortcode": "Seaside Hawaiian Hostel", "Code": "Seaside Hawaiian Hostel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 193, "ControlName": null, "Shortcode": "Sheraton Princess Kaiulani", "Code": "Sheraton Princess Kaiulani", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 194, "ControlName": null, "Shortcode": "Sheraton Waikiki", "Code": "Sheraton Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 195, "ControlName": null, "Shortcode": "Shoreline Hotel", "Code": "Shoreline Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 196, "ControlName": null, "Shortcode": "Stay Waikiki", "Code": "Stay Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 197, "ControlName": null, "Shortcode": "Surfjack Hotel", "Code": "Surfjack Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 198, "ControlName": null, "Shortcode": "Surftide Hotel", "Code": "Surftide Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 199, "ControlName": null, "Shortcode": "The Breakers Hotel", "Code": "The Breakers Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 200, "ControlName": null, "Shortcode": "The Laylow, Autograph Collection", "Code": "The Laylow, Autograph Collection", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 201, "ControlName": null, "Shortcode": "The Modern Honolulu", "Code": "The Modern Honolulu", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 202, "ControlName": null, "Shortcode": "The Modern Hotel", "Code": "The Modern Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 203, "ControlName": null, "Shortcode": "The Twin Fin Hotel", "Code": "The Twin Fin Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 204, "ControlName": null, "Shortcode": "Tropical Studios in the Heart of Waikiki", "Code": "Tropical Studios in the Heart of Waikiki", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 205, "ControlName": null, "Shortcode": "Trump International Hotel and Tower", "Code": "Trump International Hotel and Tower", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 206, "ControlName": null, "Shortcode": "Turtle Bay Resort", "Code": "Turtle Bay Resort", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 207, "ControlName": null, "Shortcode": "Vive Hotel", "Code": "Vive Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 208, "ControlName": null, "Shortcode": "Waikiki Banyan", "Code": "Waikiki Banyan", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 209, "ControlName": null, "Shortcode": "Waikiki Beach Marriott", "Code": "Waikiki Beach Marriott", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 210, "ControlName": null, "Shortcode": "Waikiki Beachcomber", "Code": "Waikiki Beachcomber", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 211, "ControlName": null, "Shortcode": "Waikiki Beachside Hostel", "Code": "Waikiki Beachside Hostel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 212, "ControlName": null, "Shortcode": "Waikiki Central Hotel", "Code": "Waikiki Central Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 213, "ControlName": null, "Shortcode": "Waikiki Grand", "Code": "Waikiki Grand", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 214, "ControlName": null, "Shortcode": "Waikiki Hana", "Code": "Waikiki Hana", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 215, "ControlName": null, "Shortcode": "Waikiki Joy", "Code": "Waikiki Joy", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 216, "ControlName": null, "Shortcode": "Waikiki Marina Resort At The Ilikai", "Code": "Waikiki Marina Resort At The Ilikai", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 217, "ControlName": null, "Shortcode": "Waikiki Parc", "Code": "Waikiki Parc", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 218, "ControlName": null, "Shortcode": "Waikiki Prince", "Code": "Waikiki Prince", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 219, "ControlName": null, "Shortcode": "Waikiki Resort", "Code": "Waikiki Resort", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 220, "ControlName": null, "Shortcode": "Waikiki Sandvilla", "Code": "Waikiki Sandvilla", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 221, "ControlName": null, "Shortcode": "Waikiki Shore", "Code": "Waikiki Shore", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 222, "ControlName": null, "Shortcode": "Waikiki Trade Center", "Code": "Waikiki Trade Center", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 223, "ControlName": null, "Shortcode": "Westin Moana Surfrider", "Code": "Westin Moana Surfrider", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 224, "ControlName": null, "Shortcode": "White Sands Hotel", "Code": "White Sands Hotel", "Selected": false, "Value": "", "ListMembers": [] }, { "ID": 225, "ControlName": null, "Shortcode": "Wyndham Waikiki Beachwalk", "Code": "Wyndham Waikiki Beachwalk", "Selected": false, "Value": "", "ListMembers": [] }] }, "Name": "Select Your Oahu Hotel", "DisplayOrder": 0, "DisplayAlias": null, "Value": null, "Required": false }], "Schedules": [], "Groupings": [{ "ID": 12, "Name": "Bronze Package", "DisplayOrder": 1, "Content": null, "Active": true, "Hidden": false }, { "ID": 13, "Name": "Silver Package", "DisplayOrder": 2, "Content": null, "Active": true, "Hidden": false }, { "ID": 14, "Name": "Gold Package", "DisplayOrder": 3, "Content": null, "Active": true, "Hidden": false }, { "ID": 15, "Name": "2023 AKL Group Bronze (15+ pax)", "DisplayOrder": 4, "Content": null, "Active": true, "Hidden": true }, { "ID": 16, "Name": "2023 AKL Group Silver (15+ pax)", "DisplayOrder": 5, "Content": null, "Active": true, "Hidden": true }, { "ID": 17, "Name": "2023 AKL Group Gold (15+ pax)", "DisplayOrder": 6, "Content": null, "Active": true, "Hidden": true }, { "ID": 77, "Name": "VIP Package", "DisplayOrder": 4, "Content": null, "Active": true, "Hidden": false }, { "ID": 83, "Name": "Inactive Promos", "DisplayOrder": 6, "Content": null, "Active": true, "Hidden": true }], "Customer": { "Email": "", "MobilePhone": "" } };
+      </script>
+
+      <form id="addToCartForm" method="post">
+        <input type="hidden" name="cart" value="True" />
+        <div id="reservation-window"></div>
+      </form>
+
+      <script>
+        window.onload = function () {
+          document.getElementById("addToCartForm").setAttribute("action", "/products/details/" + cartData.ProductID + "");
+        };
+      </script>
+
+      <script src="js/momentJS/moment.js"></script>
+      <script src="js/momentJS/moment-timezone.js"></script>
+      <script src="js/reservation-template.js"></script>
+      <script src="js/reservation-config.js"></script>
+      <script src="js/reservation-theme.js"></script>
+
+      <!-- ======================= -->
+
+
+      <footer>
+        <section>
+          <div class="footer-col" id="footer-first">
+
+          </div>
+          <div class="footer-center" id="footer-second">
+            <img src="images/main/hawaii_discount_logo_new.jpg" alt="" />
+
+            <span>Hawaii Islands</span>
+            <ul>
+              <li><a href="#">Oahu Tours</a></li>
+              <li><a href="#">Honolulu Tours</a></li>
+              <li><a href="#">Maui Tours</a></li>
+              <li><a href="#">Kauai Tours</a></li>
+              <li><a href="#">Big Island Tours</a></li>
+            </ul>
+            <span>quick links</span>
+            <ul>
+              <li><a href="#">Hawaii Car Rentals</a></li>
+              <li><a href="#">Hawaii Attractions</a></li>
+              <li><a href="#">Hawaii Family Activities</a></li>
+              <li><a href="#">Hawaii Honeymoon Activities</a></li>
+              <li><a href="#">Hawaii Adventure Activities</a></li>
+              <li><a href="#">Hawaii Vendors</a></li>
+              <li><a href="#">Hawaii Event Calendar</a></li>
+              <li><a href="/account/login">Login</a></li>
+              <li><a href="http://dev.hawaiidiscount.com:80/?SkinID=1">HawaiiDiscountPublic</a></li>
+            </ul>
+          </div>
+          <div class="footer-col" id="footer-third">
+            <span>Contact Info</span>
+            <ul>
+              <li><a href="tel:1-866-482-9775">1-866-482-9775 (Toll Free)</a></li>
+              <li><a href="tel:843-883-0798">843-883-0798 (fax)</a></li>
+              <li><a href="mailto:sales@hawaiidiscount.com">sales@hawaiidiscount.com</a></li>
+            </ul>
+            <div class="social">
+              <a href="#">
+                <img src="images/main/facebook_twitter_youtube_instagram.png" alt="" id="social-fb" />
+              </a>
+              <a href="#">
+                <img src="images/main/facebook_twitter_youtube_instagram.png" alt="" id="social-tw" />
+              </a>
+              <a href="#">
+                <img src="images/main/facebook_twitter_youtube_instagram.png" alt="" id="social-yt" />
+              </a>
+              <a href="#">
+                <img src="images/main/facebook_twitter_youtube_instagram.png" alt="" id="social-ig" />
+              </a>
+            </div>
+            <span>Book with Confidence</span>
+            <ul>
+              <li>
+                <p>✓ Secure Checkout</p>
+              </li>
+              <li>
+                <p>✓ Money Back Guarantee</p>
+              </li>
+              <li>
+                <p>✓ Low Price Guarantee</p>
+              </li>
+              <li>
+                <p>✓ No Cancellation Fees</p>
+              </li>
+              <li>
+                <p>✓ Local Experts</p>
+              </li>
+              <li>
+                <p>✓ Friendly Support</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div id="footer-bottom">
+          <ul>
+            <li> <a href="/privacy.html">Privacy Policy</a> </li>
+            <li> <a href="/terms.html">Terms</a> </li>
+            <li> <a href="/sitemaps.html">Sitemaps</a> </li>
+            <li> <a href="/account/login">Login</a> </li>
+            <li> <a href="http://dev.hawaiidiscount.com:80/?SkinID=1">HawaiiDiscountPublic</a> </li>
+          </ul>
+        </div>
+      </footer>
+      <script type="text/javascript" src="js/toggle.js"></script>
+      <script type="text/javascript" src="js/nav.js"></script>
+      <script src="js/main.js"></script>
+    </div>
+  </div>
+</body>
+
+</html>
