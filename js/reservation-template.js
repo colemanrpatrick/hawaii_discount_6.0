@@ -9,7 +9,46 @@ $group = localStorage.getItem("gGroup");
 if ($group) {
   localStorage.removeItem("gGroup");
 }
+//________________________________________________________
+//________________________________________________________
+//create Security Header
+//________________________________________________________
+//________________________________________________________
 
+let securitySection = (imgSrc) => {
+  let securityHeader;
+  let securityHeaderSpan;
+  let securityHeaderImg;
+
+  securityHeader = document.createElement("Button");
+  securityHeader.setAttribute("type", "button");
+  securityHeader.setAttribute("ID", "security-header");
+
+  securityHeaderSpan = document.createElement("span");
+  securityHeaderSpan.innerHTML = "Your Order Is Secure";
+
+  securityHeaderImg = document.createElement("IMG");
+  securityHeaderImg.setAttribute("src", "" + imgSrc + "");
+
+  securityHeader.appendChild(securityHeaderImg);
+  securityHeader.appendChild(securityHeaderSpan);
+  return securityHeader;
+};
+
+//________________________________________________________
+//________________________________________________________
+//create Title
+//________________________________________________________
+//________________________________________________________
+
+let createTitle = () => {
+  let packageTitle = document.createElement("h2");
+  packageTitle.setAttribute("id","package-title");
+  return packageTitle;
+};
+let showTitle = (titleText) => {
+  document.getElementById("package-title").innerHTML = titleText;
+}
 //_______________________________________________________
 //________________________________________________________
 //create reservation book
@@ -80,6 +119,8 @@ let createReservationTemplate = () => {
     console.log(error);
   }
 
+  reservationContainer.appendChild(createTitle());
+
   reservationContainer.appendChild(clearReservationWindowBtn);
   reservationContainer.appendChild(reservationBook);
   reservationContainer.appendChild(reservationBookControls);
@@ -146,45 +187,6 @@ let unavaliableMessage = (page, $message) => {
     .appendChild(
       createButton("unavailable-back", "browse packages", "reservation-button")
     );
-};
-
-//________________________________________________________
-//________________________________________________________
-//create Security Header
-//________________________________________________________
-//________________________________________________________
-
-let securitySection = (imgSrc) => {
-  let securityHeader;
-  let securityHeaderSpan;
-  let securityHeaderImg;
-
-  securityHeader = document.createElement("Button");
-  securityHeader.setAttribute("type", "button");
-  securityHeader.setAttribute("ID", "security-header");
-
-  securityHeaderSpan = document.createElement("span");
-  securityHeaderSpan.innerHTML = "Your Order Is Secure";
-
-  securityHeaderImg = document.createElement("IMG");
-  securityHeaderImg.setAttribute("src", "" + imgSrc + "");
-
-  securityHeader.appendChild(securityHeaderImg);
-  securityHeader.appendChild(securityHeaderSpan);
-  return securityHeader;
-};
-
-//________________________________________________________
-//________________________________________________________
-//create Title
-//________________________________________________________
-//________________________________________________________
-
-let createTitle = (page, $package) => {
-  let packageTitle = document.createElement("h2");
-  packageTitle.className = "package-title";
-  packageTitle.innerHTML = $package;
-  document.getElementById(page).appendChild(packageTitle);
 };
 //_______________________________________________________
 //________________________________________________________
@@ -1119,20 +1121,16 @@ let showPackageGroupings = (page) => {
 
 let createPage0 = () => {
   createReservationPage("page0");
-  createTitle("page0", "Select a Package");
 };
 let createPage1 = () => {
   createReservationPage("page1");
-  createTitle("page1", "Select a Date");
   showCalendar("page1", cartData);
 };
 let createPage2 = ($message) => {
   createReservationPage("page2");
-  createTitle("page2", "How Many Participants?");
 };
 let createPage3 = () => {
   createReservationPage("page3");
-  createTitle("page3", "Lastly, Party Name & Details");
   showCollectors("page3", cartData.Collectors);
   showEmailPhoneTemplate("page3");
 };
@@ -1145,6 +1143,9 @@ let createPage3 = () => {
 
 let displayPage0 = () => {
   hideReservationPages("reservation-page", "page0");
+
+  showTitle("Select A Package");
+
   showPackageGroupings("page0");
 
   let $productGroup = document.getElementsByClassName("product-group");
@@ -1177,14 +1178,13 @@ let displayPage0 = () => {
 
 let displayPage1 = ($group) => {
 
-
-
-  
   if ($group) {
     localStorage.setItem("gGroup", $group);
   }
 
   hideReservationPages("reservation-page", "page1");
+
+  showTitle("Select A Date");
 
   if (
     document.getElementById("page0") !== undefined &&
@@ -1235,6 +1235,8 @@ let displayPage2 = ($back) => {
   $group = localStorage.getItem("gGroup");
 
   hideReservationPages("reservation-page", "page2");
+
+  showTitle("Number Of Participants?");
 
   if ($group) {
     console.log("if group", $group);
@@ -1381,6 +1383,8 @@ let displayPage2 = ($back) => {
 
 let displayPage3 = () => {
   hideReservationPages("reservation-page", "page3");
+
+  showTitle("Lastly, Partipant Details");
 
   document
     .getElementById("reservation-controls")
