@@ -224,8 +224,6 @@ a.ui-button:active,
   font-size: 1.1em;
 }
 
-
-
 /*===========================*/
 #package-title {
   text-transform: capitalize;
@@ -293,7 +291,7 @@ a.ui-button:active,
 }
 
 .price-description {
-  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: inherit;
 }
 .price-description {
   display: block;
@@ -324,13 +322,16 @@ a.ui-button:active,
 }
 
 .list-price.strike-price:after {
-  content: "_______";
+  content: "";
   position: absolute;
-  right: 0;
-  width: 100%;
+  left: 0.25em;
+  width: 3.5em;
   height: 1em;
-  top: 0.3em;
+  top: 1.25em;
   line-height: 2em;
+  letter-spacing: -1em;
+  transform: rotate(-15deg);
+  border-top: 0.15em solid #333;
 }
 
 .list-price {
@@ -392,7 +393,6 @@ a.ui-button:active,
 }
 .collector-container label {
   display: block;
-  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
   color: #333;
   font-size: 1.2em;
   text-align: center;
@@ -601,7 +601,6 @@ a.ui-button:active,
 }
 #security-dialogue::after {
   content: "x";
-  font-family: sans-serif;
   color: white;
   font-size: 1.15em;
   background-color: #41a0b8;

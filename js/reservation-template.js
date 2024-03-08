@@ -116,7 +116,7 @@ let createReservationTemplate = () => {
     reservationContainer.appendChild(securitySection(securityImgSrc));
     createSecurityDialogue();
   } catch (error) {
-    console.log(error);
+    //console.log(error);
   }
 
   reservationContainer.appendChild(createTitle());
@@ -346,7 +346,7 @@ let setDisabledAndHighlited = (disabledDates, highlightedDates) => {
   //-------------------
 
   if (highlightedDates !== undefined) {
-    //console.log("step1: highlighted dates:  ", highlightedDates);
+    ////console.log("step1: highlighted dates:  ", highlightedDates);
 
     let highlightedDatesActive;
     let highlightedClass;
@@ -359,7 +359,7 @@ let setDisabledAndHighlited = (disabledDates, highlightedDates) => {
       highlightedClass.push(item.dateId);
     });
 
-    //console.log("step 2 individually highlighted array" , highlightedDatesActive);
+    ////console.log("step 2 individually highlighted array" , highlightedDatesActive);
 
     let organizeDates = (date) => {
       var mdyDate = jQuery.datepicker.formatDate("mm-dd-yy", date);
@@ -376,7 +376,7 @@ let setDisabledAndHighlited = (disabledDates, highlightedDates) => {
             return [true, `highlighted ${highlightedClass[i]}`];
           }
         } else {
-          //Do Nothing: //console.log("here's the issue");
+          //Do Nothing: ////console.log("here's the issue");
         }
       }
 
@@ -566,7 +566,7 @@ function numIncrement(numberInput, increase) {
 }
 
 let spinnerFunction = (elem, $value) => {
-  //////console.log(this.id);
+  ////////console.log(this.id);
 };
 
 let createSpinners = (controlName, $value) => {
@@ -810,7 +810,7 @@ let setSpinnerLocalValues = () => {
       _priceControl[i].getAttribute("id"),
       _priceControl[i].value
     );
-    //console.log(localStorage.getItem(_priceControl[i].getAttribute("id")));
+    ////console.log(localStorage.getItem(_priceControl[i].getAttribute("id")));
     storedSpinnerValues.push(_priceControl[i].getAttribute("id"));
   }
 };
@@ -1164,7 +1164,7 @@ let displayPage0 = () => {
     "click",
     function () {
       if (localStorage.getItem("gGroup") !== undefined) {
-        //console.log("local storage gGroup is defined");
+        ////console.log("local storage gGroup is defined");
         displayPage1(localStorage.getItem("gGroup"));
         clearReservationPage("page0");
       }
@@ -1239,7 +1239,7 @@ let displayPage2 = ($back) => {
   showTitle("Number Of Participants?");
 
   if ($group) {
-    console.log("if group", $group);
+    //console.log("if group", $group);
     showGroupPrices("page2", cartData.Prices, $group);
 
     //forEach
@@ -1265,7 +1265,7 @@ let displayPage2 = ($back) => {
     // seperates the single from the group prices
     Array.prototype.forEach.call(cartData.Prices, function (item, index) {
       if (item.Grouping == null) {
-        console.log(`${item.Category} ${categoryArray}`);
+        //console.log(`${item.Category} ${categoryArray}`);
         if (item.Category.indexOf(groupPriceCategoriesArray) == -1) {
           categoryArray.add(item.Category);
         }
@@ -1273,7 +1273,7 @@ let displayPage2 = ($back) => {
     });
 
     categoryArray.forEach((value) => {
-      console.log(value);
+      //console.log(value);
       showSinglePrices("page2", cartData.Prices, "" + value + "");
     });
 

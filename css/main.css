@@ -12,7 +12,7 @@ a {
   text-decoration: none !important;
 }
 *:not(i) {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Josefin Sans", Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
   position: relative;
@@ -1557,14 +1557,12 @@ footer li {
   text-transform: capitalize;
   line-height: 1em;
   color: #333;
-  font-family: "Montserrat", sans-serif;
   font-size: 1.25em;
 }
 .duration {
   position: absolute;
   right: 0;
   bottom: 0;
-  font-family: "Montserrat";
   font-weight: normal;
 }
 .duration b,
@@ -1936,7 +1934,6 @@ footer li {
   color: #efefef;
   cursor: pointer;
   transition: 0.3s;
-  font-family: "Oleo Script", sans-serif;
   font-size: 1.15em;
   width: 100%;
   border: 0;
@@ -2031,4 +2028,53 @@ footer li {
   .tab button p {
     width: 85%;
   }
+}
+
+/*=========== group and moneyback page ============*/
+.header-half {
+  width: 100%;
+  display: table;
+}
+.header-half section {
+  display: table-cell;
+  width: 40%;
+  padding: 2em;
+  vertical-align: middle;
+}
+.header-half #image-container {
+  display: table-cell;
+  width: 60%;
+  vertical-align: middle;
+  position: relative;
+}
+.header-half #image-container img {
+  width: 100%;
+}
+#money-back-image {
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5em;
+}
+#money-back-image img {
+  height: 1em;
+  left: -1em;
+  position: absolute;
+  top: 0;
+}
+.header-half h1 {
+  color: green;
+  line-height: 0.5em;
+}
+.header-half .span-3 {
+  line-height: 1.25em;
+  display: block;
+  margin-top: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  line-height: 1em;
 }
