@@ -552,13 +552,6 @@ let returnCalendarData = () => {
 //create Prices
 //________________________________________________________
 //________________________________________________________
-
-var $createNewLiElement = ($parentElement, $elem) => {
-  let $li = document.createElement("LI");
-  $parentElement.appendChild($li);
-  $li.appendChild($elem);
-};
-
 function numIncrement(numberInput, increase) {
   var myInputObject = document.getElementById(numberInput);
   increase ? myInputObject.value++ : myInputObject.value--;
@@ -659,11 +652,18 @@ let createPrices = (page, priceGroupArg, $needsGroup) => {
     document.getElementById("" + page + "").appendChild($priceContainer);
   }
 
-  $createNewLiElement($priceContainer, createSpinners(controlName, $quantity));
-  $createNewLiElement($priceContainer, $description);
-  $createNewLiElement($priceContainer, $priceList);
-};
+  let $priceLeft = document.createElement("li");
+  $priceLeft.setAttribute("class","price-left");
+  $priceLeft.appendChild($description);
+  $priceLeft.appendChild(createSpinners(controlName, $quantity));
 
+  let $priceRight = document.createElement("li");
+  $priceRight.setAttribute("class","price-right");
+  $priceRight.appendChild($priceList);
+  
+  $priceContainer.appendChild($priceLeft);
+  $priceContainer.appendChild($priceRight);
+};
 
 //________________________________________________________
 //________________________________________________________
@@ -791,7 +791,6 @@ let multiInputValidate = function (elem) {
   return inputValuesCombine > 0 ? true : false;
 };
 
-
 //________________________________________________________
 //________________________________________________________
 // set spinner local storage
@@ -805,22 +804,20 @@ let _priceControl = document.getElementsByClassName("price-control");
 let setSpinnerLocalValues = () => {
   let _priceControl = document.getElementsByClassName("price-control");
   for (let i = 0; i < _priceControl.length; i++) {
-    localStorage.setItem(_priceControl[i].getAttribute("id"),_priceControl[i].value);
+    localStorage.setItem(
+      _priceControl[i].getAttribute("id"),
+      _priceControl[i].value
+    );
     //console.log(localStorage.getItem(_priceControl[i].getAttribute("id")));
     storedSpinnerValues.push(_priceControl[i].getAttribute("id"));
-  };
-
+  }
 };
 
 let clearSpinnerLocalStorage = () => {
-
   for (let i = 0; i < storedSpinnerValues.length; i++) {
     localStorage.removeItem(storedSpinnerValues[i]);
   }
 };
-
-
-
 
 //________________________________________________________
 //________________________________________________________
@@ -1057,7 +1054,7 @@ let submitButton = (page) => {
   document.getElementById(page).appendChild($submitButton);
 
   $submitButton.addEventListener("click", function () {
-	clearSpinnerLocalStorage();
+    clearSpinnerLocalStorage();
   });
 };
 
@@ -1088,7 +1085,15 @@ let showPackageGroupings = (page) => {
     packageButton.setAttribute("class", `product-group`);
     packageButton.setAttribute("id", item[0]);
     packageButton.setAttribute("type", "button");
-    packageButton.innerHTML = `<span class='title'>${item[0]}</span><span class='price'><span>From</span>$${item[1]}</span><div class='radio unchecked'></div>`;
+
+    packageButton.innerHTML = `<div class="group-left">
+                               <span class='title'>${item[0]}</span>
+                               <span class='price'><span>From</span>$${item[1]}</span>
+                               </div>
+                               <div class='radio unchecked'>  
+                               <span class="material-symbols-outlined">check</span>    
+                               </div>`;
+
     document.getElementById(page).appendChild(packageButton);
     packageButton.addEventListener("click", () => {
       for (
@@ -1171,6 +1176,10 @@ let displayPage0 = () => {
 //====================================================================
 
 let displayPage1 = ($group) => {
+
+
+
+  
   if ($group) {
     localStorage.setItem("gGroup", $group);
   }
@@ -1261,33 +1270,30 @@ let displayPage2 = ($back) => {
       }
     });
 
-    //console.log(categoryArray);
-
     categoryArray.forEach((value) => {
       console.log(value);
       showSinglePrices("page2", cartData.Prices, "" + value + "");
     });
-    //--------
+
     $spinnerEvents();
 
     let _priceControl = document.getElementsByClassName("price-control");
     let _spinner = document.getElementsByClassName("spinner");
 
     for (let i = 0; i < _priceControl.length; i++) {
-        let $storage = localStorage.getItem(_priceControl[i].getAttribute("id"));
-        _priceControl[i].value = $storage;
-        _spinner[i].value = $storage;
+      let $storage = localStorage.getItem(_priceControl[i].getAttribute("id"));
+      _priceControl[i].value = $storage;
+      _spinner[i].value = $storage;
 
-        if(_priceControl[i].value == ""){
+      if (_priceControl[i].value == "") {
         _priceControl[i].value = 0;
         _spinner[i].value = 0;
-        };
-    };
+      }
+    }
 
-//===== addd above down here
+    //===== addd above down here
 
     addPriceMessage("page2");
-
   } else {
     let $categorySet = new Set();
 
@@ -1305,18 +1311,17 @@ let displayPage2 = ($back) => {
     let _spinner = document.getElementsByClassName("spinner");
 
     for (let i = 0; i < _priceControl.length; i++) {
-        let $storage = localStorage.getItem(_priceControl[i].getAttribute("id"));
-        _priceControl[i].value = $storage;
-        _spinner[i].value = $storage;
+      let $storage = localStorage.getItem(_priceControl[i].getAttribute("id"));
+      _priceControl[i].value = $storage;
+      _spinner[i].value = $storage;
 
-        if(_priceControl[i].value == ""){
+      if (_priceControl[i].value == "") {
         _priceControl[i].value = 0;
         _spinner[i].value = 0;
-        };
-    };
+      }
+    }
 
     addPriceMessage("page2");
-
   }
 
   //   // Get all the DIV elements
@@ -1406,17 +1411,13 @@ let displayPageUnavaliable = () => {
 //====================================================================
 
 const setReservationWindow = ($groupDefined) => {
-
   if ($groupDefined !== null && $groupDefined !== undefined) {
-
     createReservationTemplate();
     createPage1();
     createPage2();
     createPage3();
     displayPage1($groupDefined);
-
   } else {
-
     createReservationTemplate();
 
     for (let i = 0; i < cartData.Prices.length; i++) {
@@ -1436,7 +1437,6 @@ const setReservationWindow = ($groupDefined) => {
         displayPage0();
         break;
       }
-    };
-
-  };
+    }
+  }
 };
