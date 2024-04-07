@@ -177,7 +177,7 @@ let unavaliableMessage = (page, $message) => {
       "</h2><p>Please Select Another Option</p>";
   } else {
     unavaliableMessageBox.innerHTML =
-      "<span class='material-symbols-outlined'>sentiment_dissatisfied</span><br><h2>This package isn't available for this date.</h2><p>Please Select Another Option</p>";
+      "<span class='material-symbols-outlined'>sentiment_dissatisfied</span><br><h2>This Package Is No Longer Available</h2><p>Please Select Another Option</p>";
   }
 
   document.getElementById(page).appendChild(unavaliableMessageBox);
@@ -330,7 +330,11 @@ let cutOffMessage = (page) => {
 //________________________________________________________
 //________________________________________________________
 
-let setDisabledAndHighlited = (disabledDates, highlightedDates) => {
+let setDisabledAndHighlited = (
+  disabledDates,
+  highlightedDates,
+) => {
+  
   let dateToday = new Date();
 
   //-------------------
@@ -338,6 +342,7 @@ let setDisabledAndHighlited = (disabledDates, highlightedDates) => {
   //-------------------
 
   let formattedDateArray = formattedCalendarDates(disabledDates);
+
 
   if (checkCutoffTime() == false) {
     formattedDateArray.unshift(getTodaysDate().replace(/\//g, "-"));
@@ -487,8 +492,36 @@ $createDatePickerLegend = (highlightedDates, $month) => {
 //_______________________________________________________
 
 let showCalendar = (page, $collector) => {
-  let $cartDataDisabledDates = cartData.Availabilities[0].ClosedDates; // Dates from cartData JSON
+  let $cartDataDisabledDates;
+  $cartDataDisabledDates = cartData.Availabilities[0].ClosedDates; // Dates from cartData JSON
+
   let $cartDataHighlightDates;
+
+  //===========================//
+  let groupAvailability;
+
+  if (localStorage.getItem("gGroup")) {
+    let groupItem = localStorage.getItem("gGroup");
+
+    for (let i = 0; i < cartData.Prices.length; i++) {
+      if (cartData.Prices[i].Grouping == groupItem) {
+
+        groupAvailability = cartData.Prices[i].Availability.ClosedDates;
+        $cartDataDisabledDates = JSON.parse($cartDataDisabledDates);
+        groupAvailability = JSON.parse(groupAvailability);
+
+        $cartDataDisabledDates = $cartDataDisabledDates.concat(groupAvailability);
+        $cartDataDisabledDates = '["' + $cartDataDisabledDates.join('","') + '"]';
+
+        //.replace(/\s/g, "");
+        break;
+      }
+    }
+  } else {
+    groupAvailability = null;
+  }
+  
+  //===========================//
 
   if (highlightData) {
     $cartDataHighlightDates = highlightData.highlightDates;
@@ -499,7 +532,10 @@ let showCalendar = (page, $collector) => {
   createCalendar(page, $name);
 
   if (highlightData !== undefined && $cartDataHighlightDates !== undefined) {
-    setDisabledAndHighlited($cartDataDisabledDates, $cartDataHighlightDates); //[0]
+    setDisabledAndHighlited(
+      $cartDataDisabledDates,
+      $cartDataHighlightDates,
+    ); //[0]
     let $getMonth = new Date().getMonth();
     $createDatePickerLegend($cartDataHighlightDates, $getMonth);
   } else {
@@ -693,6 +729,7 @@ let showGroupPrices = (page, dataPrices, priceGroup) => {
 
     if (value.Grouping == priceGroup) {
       let closedArgument = value.Availability.ClosedDates;
+
       if (closedArgument == null) {
         createPrices(page, priceGroupArg, true);
       } else {
@@ -1134,7 +1171,6 @@ let createPage0 = () => {
 };
 let createPage1 = () => {
   createReservationPage("page1");
-  showCalendar("page1", cartData);
 };
 let createPage2 = ($message) => {
   createReservationPage("page2");
@@ -1208,6 +1244,8 @@ let displayPage1 = ($group) => {
     });
   }
 
+  showCalendar("page1", cartData);
+
   document
     .getElementById("reservation-controls")
     .appendChild(createButton("next-1", "continue", "next-btn"));
@@ -1246,8 +1284,6 @@ let displayPage2 = ($back) => {
   hideReservationPages("reservation-page", "page2");
 
   showTitle("Number Of Participants?");
-
-  console.log(cartData.Prices);
 
   if ($group) {
     //console.log("if group", $group);
@@ -1388,22 +1424,11 @@ let displayPage2 = ($back) => {
     false
   );
 
-  // ===== function specific to Sealife Park Luau ===== //
-  if (getTodaysDate() == returnCalendarData().datePickerValue) {
-    let $early = "#price_2341_34";
-    let $late = "#price_2341_35";
-
-    if (amPMto24hr(getCurrentTimeAMPM("Pacific/Honolulu")) >= 1000) {
-      //console.log("is this working?");
-      document.querySelector($early).remove();
-    }
-
-    if (amPMto24hr(getCurrentTimeAMPM("Pacific/Honolulu")) >= 1200) {
-      //console.log("is this working?");
-      document.querySelector($late).remove();
-    }
-  } else {
-    console.log("current day not selected");
+  if (document.getElementsByClassName("price-container")[0] == undefined) {
+    document.getElementById("page2").innerHTML =
+      '<p class="error">This package is not avaiable on this date. Please select another date or call <a href="tel:+18664829775">1-866-4829775</a></p>';
+    document.getElementById("next-2").style.display = "none";
+    console.log("no prices today");
   }
 };
 
@@ -1453,23 +1478,27 @@ const setReservationWindow = ($groupDefined) => {
   } else {
     createReservationTemplate();
 
-    for (let i = 0; i < cartData.Prices.length; i++) {
-      let isGrouping = cartData.Prices[i].Grouping;
+    let isGrouping = [];
 
-      if (isGrouping == null) {
-        createPage1();
-        createPage2();
-        createPage3();
-        displayPage1();
-        break;
-      } else {
-        createPage0();
-        createPage1();
-        createPage2();
-        createPage3();
-        displayPage0();
-        break;
-      }
+    for (let i = 0; i < cartData.Prices.length; i++) {
+      isGrouping.push(cartData.Prices[i].Grouping);
+    }
+
+    let allEqual = (arr) => arr.every((val) => val === arr[0]);
+
+    doesNotContainGroup = allEqual(isGrouping);
+
+    if (doesNotContainGroup) {
+      createPage1();
+      createPage2();
+      createPage3();
+      displayPage1();
+    } else {
+      createPage0();
+      createPage1();
+      createPage2();
+      createPage3();
+      displayPage0();
     }
   }
 };

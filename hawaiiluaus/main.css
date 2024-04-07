@@ -1,0 +1,1959 @@
+/* update 6 */
+/* delete this later*/
+input[type="number"] {
+  width: 3em;
+  font-size: 1.5em;
+}
+/*================*//*================*//*================*/
+/*todo: fix sizing issues for mobile > 900px*/
+/*================*/
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  background: ;
+}
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none !important;
+}
+b {
+  font-weight: bold !important;
+}
+ul,
+ul li {
+  list-style-type: none;
+  list-style-position: inside;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  font-size: 32px;
+}
+body {
+  background-image: url("../images/tapasBlue.jpg");
+  background-size: 8em;
+}
+@media(max-width:2280px) {
+	body {
+		font-size: 24px;
+	}
+}
+@media(max-width:2160px) {
+	body {
+		font-size: 20px;
+	}
+}
+@media(max-width:1800px) {
+	body {
+		font-size: 17px;
+	}
+}
+@media(max-width:1608px) {
+	body {
+		font-size: 16px;
+	}
+}
+@media(max-width:640px) {
+	body {
+		font-size: 15px;
+	}
+}
+@media(max-width:480px) {
+	body {
+		font-size: 12px;
+	}
+}
+@media(max-width:350px) {
+	body {
+		font-size: 10px !important;
+	}
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Oleo Script", sans-serif;
+}
+p,
+a,
+b {
+  font-family: "Montserrat" ,Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+}
+/*======== mobile menu btn =========*/
+.menu-btn {
+  height: 3em;
+  transition: 0.3s;
+  background: transparent;
+  border: 0;
+  cursor: poMontserrat;
+  font-size: 0.75em;
+  position: absolute;
+  width: 3.5em;
+  right: 1em;
+  top: 2.5em;
+  display: inline-block;
+}
+.menu-btn hr {
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  position: absolute;
+  border: 0.25em solid white;
+  height: 0;
+}
+.menu-btn-hr-1 {
+  top: 0;
+  left: 50%;
+  -moz-transform: translateX(-50%) rotate(0deg);
+  -ms-transform: translateX(-50%) rotate(0deg);
+  -o-transform: translateX(-50%) rotate(0deg);
+  -webkit-transform: translateX(-50%) rotate(0deg);
+  transform: translateX(-50%) rotate(0deg);
+}
+.menu-btn-hr-2 {
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.menu-btn-hr-3 {
+  bottom: 0;
+  left: 50%;
+  -moz-transform: translateX(-50%) rotate(0deg);
+  -ms-transform: translateX(-50%) rotate(0deg);
+  -o-transform: translateX(-50%) rotate(0deg);
+  -webkit-transform: translateX(-50%) rotate(0deg);
+  transform: translateX(-50%) rotate(0deg);
+}
+.menu-btn.active .menu-btn-hr-1 {
+  top: 50%;
+  -moz-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  -o-transform: translate(-50%, -50%) rotate(-45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.menu-btn.active .menu-btn-hr-2 {
+  opacity: 0;
+}
+.menu-btn.active .menu-btn-hr-3 {
+  top: 50%;
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  -o-transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+/*=====================*/
+.menu-btn {
+  display: none;
+}
+#phone-button {
+  display: none;
+}
+#nested-menu {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+#nested-list {
+  position: absolute;
+  left: 0;
+  text-align: left;
+  display: block !important;
+  width: 14em !important;
+  background: #03223ebd;
+  top: 1.5em;
+  transform: scaleY(0);
+}
+#nested-menu:hover #nested-list {
+  transform: scaleY(1);
+}
+#nested-menu ul li {
+  display: block !important;
+  width: 100% !important;
+  text-align: left;
+  padding: 1em;
+}
+#nested-menu ul li a {
+  display: block;
+  width: auto;
+  text-align: left;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .menu-btn,
+  #phone-mobile {
+    display: block;
+  }
+  #masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  #main-nav {
+    position: fixed;
+    background: black;
+    left: 0;
+    top: 5em;
+  }
+  #main-nav a {
+    display: block;
+    width: 100%;
+  }
+}
+#masthead {
+  padding: 1em;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(2, 0, 36, 0.45) 0%;
+}
+#masthead ul {
+  display: table;
+  width: 100%;
+}
+#masthead ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+}
+#masthead ul li:last-child {
+  text-align: right;
+  width: 70%;
+}
+#main-nav {
+  display: block;
+  width: 100%;
+}
+#main-nav a {
+  font-size: 1.15em;
+  color: white;
+  text-transform: capitalize;
+  display: inline-block;
+  transition: 0.3s;
+  text-shadow: 0em 0em 1.5em #1a535c;
+  letter-spacing: 0.05em;
+  border-bottom: 0.25em solid transparent;
+  font-family: "Montserrat" ,Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 1em;
+}
+#main-nav a:hover {
+  border-bottom: 0.25em solid white;
+}
+#phone-desktop {
+  font-size: 1.15em;
+  color: #f7b801;
+  transition: 0.1s;
+  position: absolute;
+  top: -0.4em;
+  right: 0;
+}
+#phone-desktop span:first-child {
+  font-size: 0.75em;
+}
+#phone-desktop .material-symbols-outlined {
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: -0.2em;
+  margin-left: 0.5em;
+}
+#logo {
+  vertical-align: top;
+  display: inline-block;
+}
+#logo img {
+  display: inline-block;
+  width: 5em;
+  vertical-align: middle;
+}
+#logo span {
+  text-transform: capitalize;
+  color: white;
+  font-size: 2em;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1em;
+  font-family: "Oleo Script", sans-serif;
+}
+#return-top {
+  position: fixed;
+  bottom: 0.5em;
+  right: 0;
+  display: table;
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.75);
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  z-index: 998;
+  cursor: poMontserrat;
+  color: white;
+}
+#return-top span,
+#return-top p {
+  display: table-cell;
+  text-transform: capitalize;
+  vertical-align: middle;
+  padding: 0.25em;
+}
+#return-top span {
+  font-size: 1.25em;
+  border-right: 0.1em solid rgba(255, 255, 255, 0.5);
+}
+#phone-mobile {
+  display: none;
+}
+@media (max-width: 940px){
+  #logo span{
+    font-size: 1.5em;
+  }
+  #logo img{
+    width: 4.5em;
+  }
+}
+@media (max-width: 900px) {
+  #phone-desktop {
+    display: none;
+  }
+  #phone-mobile {
+    position: absolute;
+    right: 4em;
+    top: 1.5em;
+  }
+  #phone-mobile .material-symbols-outlined {
+    color: white;
+    font-size: 3em;
+  }
+  .menu-btn,
+  #phone-mobile {
+    display: block;
+  }
+  #masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    padding: 0;
+    background: rgba(2, 0, 36, 0.75);
+    height: 6em;
+    border-bottom: 0.23em solid #f7b801;
+  }
+  @media(max-width:500px){
+    #masthead{
+      font-size: 0.85em;
+    }
+  }
+  #main-nav {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.95);
+    left: 0;
+    top: 5em;
+    right: auto;
+    height: 100%;
+    z-index: 998;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: 0.5s;
+  }
+  #main-nav.active {
+    transform: scaleY(1);
+  }
+  #nested-list {
+    position: relative;
+    left: auto;
+    text-align: left;
+    display: block !important;
+    width: auto !important;
+    background: transparent;
+    top: auto;
+    transform: scaleY(1);
+    width: 100% !important;
+  }
+  #nested-menu {
+    display: block;
+    width: 100%;
+  }
+  #masthead ul li:not(#logo) {
+    text-align: center;
+  }
+  #main-nav a {
+    display: block;
+    width: 100%;
+    margin: 0em;
+    padding: 0.85em;
+    font-size: 1.25em;
+    text-align: right;
+  }
+  #main-nav a,
+  #main-nav a:hover {
+    transform: scale(1);
+  }
+  #phone-desktop {
+    display: none;
+  }
+  #nasthead {
+    padding: 0;
+  }
+  #logo {
+    width: 75%;
+    top: auto;
+    text-align: left;
+    padding-top: 1em;
+    padding-left: 0.25em;
+  }
+  #masthead ul li:last-child {
+    width: 25%;
+  }
+  #nested-menu ul li a {
+    display: block;
+    width: auto;
+    text-align: right;
+    margin: 0;
+  }
+  #nested-list li {
+    display: block !important;
+    padding: 0 !important;
+    text-align: right !important;
+  }
+}
+@media (max-width: 450px) {
+  #main-nav a {
+    font-size: 1.5em;
+  }
+  #return-top p {
+    font-size: 1.25em;
+  }
+}
+/*===================================================*/
+#why-book-with {
+	background: url("../images/hawaii-bg.jpg");
+	background-size: cover;
+	background-position: left center;
+	text-align: center;
+	padding-top: 8em;
+	padding-bottom: 8em;
+	border-bottom: 0.5em solid #d0a171;
+	background-attachment: fixed;
+}
+@media(max-width:500px){
+  #why-book-with{
+    background-attachment: local;
+  }
+}
+#why-book-with h3 {
+	color: white;
+	text-transform: capitalize;
+	font-size: 3em;
+	margin-bottom: 1em;
+}
+#why-book-with h3 br {
+	display: none;
+}
+#why-book-with ul {
+	display: table;
+	/*! display: none; */
+	width: 100%;
+	margin: 0 auto;
+	max-width: 60em;
+}
+#why-book-with ul li {
+	display: table-cell;
+	width: 33.3%;
+	text-align: center;
+	vertical-align: middle;
+	padding: 1em;
+}
+.booking-details {
+	width: 100%;
+	border-radius: 2em;
+	background: white;
+	position: relative;
+	text-align: center;
+	padding: 2em 1em 1em 1em;
+}
+.booking-details img {
+	position: absolute;
+	border-radius: 50%;
+	background: #952d68;
+	border: 0.25em solid white;
+	top: -3em;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5em;
+	padding: 0.5em;
+}
+.booking-details header {
+	text-align: center;
+	font-size: 1.33em;
+	text-transform: capitalize;
+	color: #011627;
+}
+#book-with-cta {
+	background: #f7b801;
+	width: 92%;
+	display: block;
+	max-width: 11.35em;
+	margin: 0 auto;
+	margin-top: 0px;
+	padding: 0.5em;
+	font-size: 1.5em;
+	font-family: "oleo script", san-serif;
+	border-radius: 1em;
+	margin-top: 1em;
+	color: #9a031e;
+	text-transform: capitalize;
+}
+@media(max-width:900px){
+  #why-book-with{
+    background-attachment: local;
+  }
+  #why-book-with ul {
+  display: block;
+  }
+  #why-book-with ul li {
+  display: block;
+    width: 100%;
+  } 
+  .booking-details{
+    max-width: 20em;
+    margin: 2em auto;
+  }
+}
+/*===================================================*/
+footer ul li {
+  display: table-cell;
+  width: 33.3%;
+  vertical-align: top;
+  padding: 2em;
+  text-align: center;
+}
+footer ul{
+  width: 100%;
+  display: table;
+}
+footer a {
+  color: white;
+  text-transform: capitalize;
+  line-height: 2em;
+}
+footer a img {
+  width: 5em;
+  display: block;
+  margin: 0 auto;
+}
+footer aside {
+  color: white;
+  background: black;
+  padding: 0.5em;
+  text-align: center;
+  color: slategrey;
+}
+footer h4 {
+  color: gold;
+  font-size: 1.5em;
+}
+@media (max-width: 900px) {
+  body {
+    background-size: 8em;
+  }
+  footer ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*= product-medium =*/
+.product-med{
+  max-width: 35em;
+  height: 25em;
+  position: relative;
+  overflow: hidden;
+  font-size: 1em;
+	width: 100%;
+	margin: 0 auto;
+  text-align: left;
+  font-size: 0.9em;
+  background: black;
+}
+.product-med header{
+	position: absolute;
+	left: 2em;
+	top: 2em;
+	width: auto;
+	z-index: 3;
+	text-shadow: 0em 0em 0.5em black;
+}
+.product-med header h2,
+.product-med header h3{
+	color: white;
+display: block;
+	text-transform: capitalize;
+line-height: 1em;
+}
+.product-med header h2{
+	font-weight: bold;
+font-family: "Oleo Script", 'Times New Roman', Times, serif;
+font-size: 2em;
+}
+.product-med header h3{
+   font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+ font-size: 1.5em;
+   font-weight: normal;
+}
+.product-med img{
+height: 100%;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+opacity: 0.7;
+}
+.product-med .duration{
+position: absolute;
+	left: 2em;
+	bottom: 2em;
+	width: auto;
+}
+.product-med .duration .material-symbols-outlined,
+.product-med .duration .duration-time{
+color: white;
+display: inline-block;
+vertical-align: bottom;
+text-shadow: 0em 0em 0.5em black;
+}
+.product-med .duration .material-symbols-outlined{
+  font-size:2em;
+}
+.product-med .duration .duration-time{
+   font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+ font-size: 1.25em;
+	font-weight: bolder;
+}
+.product-med .price{
+width: auto;
+position: absolute;
+right: 2em;
+bottom: 2em;
+text-align: right;
+}
+.product-med .price .before-price,
+.product-med .price .after-price{
+color: white;
+display: block;
+font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+line-height: 1.25em;
+}
+.product-med .price .before-price{
+font-size: 1.5em;
+opacity: 0.75;
+text-decoration: line-through;
+}
+.product-med .price .after-price{
+font-size: 1.5em;
+display: inline-block;
+vertical-align: bottom;
+font-weight: bold;
+text-shadow: 0em 0em 1em black;
+}
+.product-med .price .after-price::before{
+content: "from ";
+font-size: 0.6em;
+display: inline-block;
+vertical-align: baseline;
+text-transform: capitalize;
+margin-right: 0.5em;
+}
+.product-med .price a{
+display: block;
+border-radius: 5em;
+background-color: #FFC700;
+padding: 0.25em;
+text-align: right;
+margin-top: 0.5em;
+}
+.product-med .price a span{
+display: inline-block;
+vertical-align: middle;
+color: #3F0000;
+text-transform: capitalize;
+font-size: 1.25em;
+font-weight: bold;
+padding-left: 0.5em;
+}
+.product-med .price a span.material-symbols-outlined{
+color: gold;
+background-color: black;
+border-radius: 5em;
+padding: 0.075em 0.05em 0.075em 0.15em;
+font-size: 2em;
+margin-left: 0.25em;
+}
+/*=========================*/
+.product-full{
+ width: 95%;
+  height: 30em;
+  overflow: hidden;
+  position: relative;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+@media(max-width:1300px){
+  .product-full{
+    border: none;
+  }
+}
+.product-full .img-container {
+  width: 100%;
+  height: 100%;
+  /*! position: relative; */
+  background: #000;
+}
+.product-full .img-container img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0.75;
+}
+.product-full article {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 50%;
+  transform: translateY(-50%);
+  padding: 2em;
+  text-align: left;
+}
+.product-full h2 {
+  font-weight: bold;
+  font-family: "Oleo Script", 'Times New Roman', Times, serif;
+  font-size: 2em;
+  color: white;
+}
+.product-full h3 {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+  color: white;
+}
+.product-full p {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  color: white;
+  line-height: 2em;
+  margin: 1em 0em;
+  text-shadow: 0em 0em 1em black;
+  font-size: 1.05em;
+}
+.product-full ul{
+  width: 100%;
+  display: table;
+  text-align: right;
+}
+.product-full ul li{
+  width: 50%;
+  display: table-cell;
+}
+.product-full .before-price,
+.product-full .after-price{
+color: white;
+display: block;
+font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+line-height: 1.25em;
+}
+.product-full .before-price{
+font-size: 1.5em;
+opacity: 0.75;
+text-decoration: line-through;
+}
+.product-full .after-price{
+font-size: 1.5em;
+display: inline-block;
+vertical-align: bottom;
+font-weight: bold;
+text-shadow: 0em 0em 1em black;
+}
+.product-full .after-price::before{
+content: "from ";
+font-size: 0.6em;
+display: inline-block;
+vertical-align: baseline;
+text-transform: capitalize;
+margin-right: 0.5em;
+}
+.product-full a{
+display: inline-block;
+border-radius: 5em;
+background-color: #FFC700;
+padding: 0.25em;
+text-align: right;
+margin-top: 0.5em;
+vertical-align: bottom;
+}
+.product-full a span{
+display: inline-block;
+vertical-align: middle;
+color: #3F0000;
+text-transform: capitalize;
+font-size: 1.25em;
+font-weight: bold;
+padding-left: 0.5em;
+}
+.product-full a span.material-symbols-outlined{
+color: gold;
+background-color: black;
+border-radius: 5em;
+padding: 0.075em 0.05em 0.075em 0.15em;
+font-size: 2em;
+margin-left: 0.25em;
+}
+@media(max-width: 800px){
+ .product-full{
+    height: auto;
+    overflow: visible;
+    max-width: 35em;
+  }
+.product-full .img-container {
+    height: 20em;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+  position: relative;
+}
+
+.product-full article {
+  position: relative;
+  height: auto;
+  display: block;
+  width: 100%;
+  
+  transform: none;
+  background-image: url("../images/tapasBlue.jpg");
+  background-size: 8em;
+}
+
+}
+@media(max-width:600px){
+  .product-full .img-container img {
+    width: auto;
+   height: 100%;
+}
+}
+
+#catalog-h1 .span-1{
+  display: block;
+  font-size: 0.5em;
+  line-height: 0.5em;
+  font-family: "Montserrat" ,Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 0em 0em 0.5em black;
+}
+
+.activity .title .span-1{
+   display: block;
+  font-size: 0.55em;
+  font-weight: bold;
+  color: #333;
+  font-family: "Montserrat" ,Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#Waikiki\ Luau\ at\ Rock-A-Hula\ Cabana\  .span-1 {
+  display: ;
+  display: inline;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: inherit;
+  color: inherit;
+  padding-left: 0.2em;
+}
+
+
+/*=========================*/
+
+#luaus {
+  padding: 1em;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  background: url("../images/tapasWhite.jpg");
+  background-size: 8em;
+}
+
+/*= product details =*/
+
+.page-header {
+	position: relative;
+	background-size: cover !important;
+	background-position: center !important;
+	padding: 8em 0em;
+	text-align: center;
+	margin-top: 5.9em;
+}
+.page-header h1{
+  color: white;
+  font-size: 3em;
+  text-shadow: 0em 0em 0.5em black;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+
+/*= activities =*/
+.activity {
+  display: block;
+  width: 100%;
+  background: ivory;
+  padding: 2em;
+  margin-bottom: 1em;
+  max-width: 60em;
+  border: 1px solid gainsboro;
+  overflow: auto;
+  margin: 1em auto;
+}
+
+.activity-title,
+.activity-description,
+.activity-footer{
+  text-align: left;
+  width: 50%;
+  padding-left: 1em;
+  position: relative;
+  float: right;
+}
+.activity-title .title {
+  text-transform: capitalize;
+  color: #032442;
+  font-weight: normal;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+  margin-top:   0;
+  text-align: left;
+}
+.sub-title {
+  text-transform: capitalize;
+  line-height: 1em;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25em;
+}
+.duration {
+  font-family: "Montserrat";
+  font-weight: normal;
+  display: block;
+  margin-top: 1em;
+}
+.duration b,
+.duration span{
+  color: #333;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.activity-img {
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+  height: 20em;
+  max-width: 22em;
+  float: left;
+}
+.activity-img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  transform: translate(-50%,-50%);
+}
+.activity-description{
+  padding-top: 1em;
+}
+.activity-description p{
+  line-height: 1.75em;
+  font-size: 1em;
+}
+.activity-footer{
+  margin-top: 1em;
+}
+.activity-left {
+  text-align: left;
+}
+.activity-right {
+  text-align: right;
+}
+.activity-footer li{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.1em;
+  width: 49%;
+}
+.activity-anchor {
+  background: #FFC700;
+  display: inline-block;
+  border-radius: 2em;
+  padding: 0.5em 0.5em 0.5em 1em;
+  text-align: center;
+}
+.activity-anchor p {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #3F0000;
+  display: inline-block;
+  vertical-align: middle;
+}
+.sale-price,
+.list-price {
+  font-weight: bolder;
+  font-size: 1.25em
+}
+.sale-price{
+  color: #333;
+}
+.list-price{
+  color: lightgrey;
+  text-decoration: line-through;
+}
+.sale-price::before{
+  content: "From ";
+  font-size: 0.75em;
+}
+.activity-anchor .material-symbols-outlined {
+  color: gold;
+  background: black;
+  border-radius: 1em;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  padding: 0.05em 0em 0.05em 0.1em;font-size: 1em;
+}
+@media(max-width:900px){
+  .activity-title,
+  .activity-description,
+  .activity-footer{
+    width:45%;
+  }
+}
+@media(max-width:700px){
+  .activity{
+    max-width: 30em;
+    margin: 1em auto;
+    font-size: 0.9em;
+  }
+  .activity-title,
+  .activity-description,
+  .activity-footer,
+  .activity-img{
+    float: none;
+    width: 100%;
+    max-width: 100%;
+  }
+  .activity-img img{
+    height: auto;
+    width: 100%;
+  }
+  .sub-title{
+    padding-bottom: 0.5em;
+  }
+  .sale-price,
+  .list-price{
+    font-size: 1.5em;
+  }
+}
+/*==== precheckout ===*/
+
+.HomeContentTopBG {
+  background: url("../images/tapasWhite.jpg");
+  background-size: 8em;
+  padding: 0;
+  margin-top: 6em;
+}
+.SecondaryContentContainer {
+  text-align: center;
+  padding: 2em;
+  max-width: 1200px;
+  width: 95%;
+  margin: 0em auto;
+  background-color: whitesmoke;
+  font-family: "Montserrat" ,Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 2em;
+  list-style-type: none;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.SecondaryContentContainer h1,
+.SecondaryContentContainer h3{
+  margin: 1em auto;
+  color: #333;
+}
+.SecondaryContentContainer p{
+  max-width: 60em;
+  margin: 0 auto;
+}
+.SecondaryContentContainer li{
+    list-style-type: none;
+  text-align: left;
+  margin: 1em auto;
+  padding-left: 2em;
+  max-width: 40em;
+}
+
+
+.title {
+  /*! color: white; */
+  /*! margin-top: 5em; */
+  /*! text-align: center; */
+  /*! font-size: 2em; */
+}
+#contact-form {
+  margin: 1em auto;
+  text-align: center;
+  background: #fff4f4;
+  border-radius: 1em;
+  max-width: 28em;
+  break-inside: avoid;
+  padding: 3em;
+  width: 90%;
+}
+@media(max-width:900px){
+	#contact-form {
+		column-count: 0;
+	}
+}
+.form-control {
+  padding: 1em;
+  width: 100%;
+  max-width: 25em;
+  margin: 1em auto;
+  border-radius: 0.75em;
+  border: 0.15em solid #006285;
+  text-transform: capitalize;
+}
+.row {
+	break-inside: avoid;
+}
+.md-form label {
+  display: block;
+  color: #00678a;
+  font-size: 1em;
+  font-family: "kontikialohajfregular", sans-serif;
+  font-weight: lighter;
+}
+.container {
+  text-align: center;
+  padding: 2em 0em;
+}
+#contact-form input[type=submit] {
+  background-color: #BEC166;
+  color: #012F3F;
+  font-size: 1em;
+  border-radius: 2em;
+  text-transform: capitalize;
+  border: 0;
+  padding: 0.25em 2em;
+}
+.accordion{
+	width: 100%;
+	padding: 5em;
+}
+.accordion .tab{
+	width: 100%;
+	background: whitesmoke;
+}
+.accordion .tab header {
+	padding: 1em;
+	text-align: center;
+	text-transform: capitalize;
+	font-weight: 100;
+	background: #06425b;
+	border-bottom: 2px solid #1c5c77;
+	color: #efefef;
+	cursor: pointer;
+  transition: 0.3s;
+	font-family: "Oleo Script", sans-serif;
+	font-size: 1.25em;
+}
+.accordion .tab.active header{
+  color:#053c51;
+  background: #f7b801;
+}
+.accordion .tab .content {
+	width: 100%;
+	padding: 3em;
+	text-align: center;
+	transform-origin: top;
+}
+.accordion .tab .content p {
+	font-size: 1em;
+	font-weight: 300;
+	line-height: 2.5em;
+	max-width: 40em;
+	margin: 0 auto;
+	width: 90%;
+}
+.accordion .tab .content{
+	display: none;
+}
+@@-webkit-keyframes fadeIn {
+	0%{ transform: scaleY(0) }
+	100%{ transform: scaleY(1)}
+}
+@@-moz-keyframes fadeIn {
+	0%{ transform: scaleY(0) }
+	100%{ transform: scaleY(1)}
+}
+.accordion .tab.active .content{
+	display: block;
+  height: auto;
+	-webkit-animation: fadeIn 0.3s ease-out;
+	-moz-animation: fadeIn 0.3s ease-out;
+}
+
+
+
+
+/*=====================*/
+  
+#seating-aside {
+  background-size: 50em;
+  text-align: justify;
+  padding: 5em;
+  background: #ece2d7;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#seating-aside p {
+  line-height: 2.25em;
+}
+
+@media (max-width: 600px) {
+  #seating-aside {
+    padding: 2em;
+  }
+}
+
+
+/* reservation page styling */
+
+.luau-details {
+  display: table;
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+  background: whitesmoke;
+}
+
+
+#playerWrapper {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+
+#luau-article {
+  padding: 0em 5em 0em 5em;
+  vertical-align: middle;
+  background: whitesmoke;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 95%;
+  color: #333;
+}
+
+#luau-article p {
+  color: #333;
+}
+#luau-article img {
+  width: 100%;
+  max-width: 100% !important;
+  margin: 0 auto;
+}
+#player {
+  padding: 1em;
+}
+
+#player {
+  overflow: hidden;
+  position: relative;
+  min-height: 20em;
+}
+
+#img-alt {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#player iframe {
+  font-size: ;
+  width: 100%;
+  height: 20em;
+}
+
+#luau-hero {
+  height: 20em;
+  background-size: cover;
+  background-position: center;
+}
+
+#luau-body {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  background: url("../images/tapasWhite.jpg");
+  background-size: 8em;
+  margin-top: 5em;
+}
+
+#book-now-mobile {
+  display: none;
+}
+
+#seating-chart {
+  max-width: 40em;
+  margin: 1em auto;
+}
+
+#highlights-header {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: capitalize;
+  font-size: 1.5em;
+}
+
+#luau-highlights li:not(#highlights-header) {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1em;
+  margin-top: 1em;
+  list-style-type: disc;
+  text-align: left;
+  list-style-position: outside;
+  margin-left: 1em;
+}
+
+.bulletpoint-row {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 2em;
+  column-count: 2;
+  column-fill: balance;
+}
+.bulletpoint-header {
+  font-size: 1.25em;
+  text-align: center;
+  margin: 1em 0em;
+}
+.bulletpointstyles {
+  text-align: left;
+  line-height: 2em;
+  list-style-type: disc;
+  max-width: 20em;
+  margin: 0 auto;
+  break-inside: avoid;
+}
+.bulletpointstyles li {
+  list-style-type: circle;
+  list-style-position: outside;
+  margin-left: 1em;
+}
+
+#luau-article li {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 2.5em;
+  text-align: left;
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 2em;
+}
+
+#luau-article strong {
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#luau-gallery {
+  width: 95%;
+  line-break: normal;
+  text-align: center;
+  background: whitesmoke;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-image {
+  display: inline-block;
+  height: 20em;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  max-width: 20em;
+}
+
+#luau-gallery {
+  width: 95%;
+  line-break: normal;
+  text-align: center;
+  background: whitesmoke;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-image {
+  display: inline-block;
+  height: 20em;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  max-width: 20em;
+}
+
+#luau-pricing h1 {
+  font-size: 2.5em;
+  color: #032442;
+  line-height: 1em;
+}
+
+#luau-pricing {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+#luau-pricing h3 {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  font-size: 1.5em;
+}
+
+#luau-pricing ul {
+  display: table;
+  margin: 0 auto;
+}
+
+#luau-before-price {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  color: #3333335c;
+}
+
+#luau-after-price {
+  display: table-cell;
+  padding: 1em;
+  font-size: 1.5em;
+  font-family: ;
+}
+
+#luau-before-price b {
+  list-style-type: ;
+  text-decoration: line-through;
+}
+
+#luau-pricing ul li span {
+  display: block;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: ;
+}
+
+#luau-precheckout {
+  display: inline-block;
+  border-radius: 5em;
+  background-color: #ffc700;
+  padding: 0.25em;
+  text-align: right;
+  margin-top: 0.5em;
+  vertical-align: middle;
+  border: 0;
+  font-size: 1.1em;
+  border: 0.2em solid white;
+}
+
+#luau-precheckout span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #3f0000;
+  text-transform: capitalize;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding-left: 0.5em;
+}
+
+#luau-precheckout .material-symbols-outlined {
+  color: gold;
+  background-color: black;
+  border-radius: 5em;
+  padding: 0.075em 0.05em 0.075em 0.15em;
+  font-size: 2em;
+  margin-left: 0.25em;
+}
+#seating-link {
+  display: inline-block;
+  border-radius: 5em;
+  padding: 0.65em;
+  text-align: right;
+  margin-top: 0.5em;
+  vertical-align: middle;
+  font-size: 1.1em;
+  border: 0.15em solid #032541;
+  color: #042342;
+}
+#first-luau-details {
+  background: transparent;
+  padding: 1em;
+  max-width: 1200px;
+  background: whitesmoke;
+}
+
+@media (max-width: 700px) {
+  #luau-hero {
+    height: 15em;
+  }
+
+  .luau-details,
+  #playerWrapper,
+  #luau-pricing,
+  #luau-article {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #first-luau-details,
+  #playerWrapper,
+  #luau-pricing {
+    transform: scaleY(-1);
+  }
+
+  #luau-pricing {
+    padding: 1em;
+  }
+
+  #luau-pricing h1 {
+    font-size: 2.5em;
+    max-width: 10em;
+    line-height: 1em;
+    margin: 0 auto;
+  }
+
+  #playerWrapper iframe {
+    max-width: 30em;
+  }
+}
+
+@media (max-width: 700px) {
+  #luau-pricing h1 {
+    font-size: 2em;
+  }
+
+  #luau-article {
+    padding: 2em;
+  }
+
+  #seating-chart img {
+    max-width: 30em;
+  }
+}
+
+#seating-chart img {
+  width: 90%;
+}
+
+/*=====================*/
+
+#seating-aside {
+  background-size: 50em;
+  text-align: justify;
+  padding: 5em;
+  background: #ece2d7;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#seating-aside p {
+  line-height: 2.25em;
+}
+
+@media (max-width: 600px) {
+  #seating-aside {
+    padding: 2em;
+  }
+}
+
+
+/* reservation page styling */
+
+.luau-details {
+  display: table;
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+  background: whitesmoke;
+}
+
+
+#playerWrapper {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+
+#luau-article {
+  padding: 0em 5em 0em 5em;
+  vertical-align: middle;
+  background: whitesmoke;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 95%;
+  color: #333;
+}
+
+#luau-article p {
+  color: #333;
+}
+#luau-article img {
+  width: 100%;
+  max-width: 100% !important;
+  margin: 0 auto;
+}
+#player {
+  padding: 1em;
+}
+
+#player {
+  overflow: hidden;
+  position: relative;
+  min-height: 20em;
+}
+
+#img-alt {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#player iframe {
+  font-size: ;
+  width: 100%;
+  height: 20em;
+}
+
+#luau-hero {
+  height: 20em;
+  background-size: cover;
+  background-position: center;
+}
+
+#luau-body {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  background: url("../images/tapasWhite.jpg");
+  background-size: 8em;
+  margin-top: 5em;
+}
+
+#book-now-mobile {
+  display: none;
+}
+
+#seating-chart {
+  max-width: 40em;
+  margin: 1em auto;
+}
+
+#highlights-header {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: capitalize;
+  font-size: 1.5em;
+}
+
+#luau-highlights li:not(#highlights-header) {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1em;
+  margin-top: 1em;
+  list-style-type: disc;
+  text-align: left;
+  list-style-position: inherit;
+  margin-left: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.bulletpoint-row {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 2em;
+  column-count: 2;
+  column-fill: balance;
+  background: #e9ece6;
+  padding: 1em;
+}
+.bulletpoint-header {
+  font-size: 1.25em;
+  text-align: center;
+  margin: 1em 0em;
+}
+.bulletpointstyles {
+  text-align: left;
+  line-height: 2em;
+  list-style-type: disc;
+  max-width: 20em;
+  margin: 0 auto;
+  break-inside: avoid;
+}
+.bulletpointstyles li {
+  list-style-type: circle;
+  list-style-position: outside;
+  margin-left: 1em;
+}
+
+#luau-article li {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5em;
+  text-align: left;
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 2em;
+}
+
+#luau-article strong {
+  font-weight: bold;
+  color: #032442;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#luau-gallery {
+  width: 95%;
+  line-break: normal;
+  text-align: center;
+  background: whitesmoke;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-image {
+  display: inline-block;
+  height: 20em;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  max-width: 20em;
+}
+
+#luau-gallery {
+  width: 95%;
+  line-break: normal;
+  text-align: center;
+  background: whitesmoke;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.gallery-image {
+  display: inline-block;
+  height: 20em;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  max-width: 20em;
+}
+
+#luau-pricing h1 {
+  font-size: 2em;
+  color: #032442;
+  line-height: 1em;
+}
+
+#luau-pricing {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+#luau-pricing h3 {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  font-size: 1.5em;
+}
+
+#luau-pricing ul {
+  display: table;
+  margin: 0 auto;
+}
+
+#luau-before-price {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  color: #3333335c;
+}
+
+#luau-after-price {
+  display: table-cell;
+  padding: 1em;
+  font-size: 1.5em;
+  font-family: ;
+}
+
+#luau-before-price b {
+  list-style-type: ;
+  text-decoration: line-through;
+}
+
+#luau-pricing ul li span {
+  display: block;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: ;
+}
+
+#luau-precheckout {
+  display: inline-block;
+  border-radius: 5em;
+  background-color: #ffc700;
+  padding: 0.25em;
+  text-align: right;
+  margin-top: 0.5em;
+  vertical-align: middle;
+  border: 0;
+  font-size: 1.1em;
+  border: 0.2em solid white;
+}
+
+#luau-precheckout span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #3f0000;
+  text-transform: capitalize;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding-left: 0.5em;
+}
+
+#luau-precheckout .material-symbols-outlined {
+  color: gold;
+  background-color: black;
+  border-radius: 5em;
+  padding: 0.075em 0.05em 0.075em 0.15em;
+  font-size: 2em;
+  margin-left: 0.25em;
+}
+#seating-link {
+  display: inline-block;
+  border-radius: 5em;
+  padding: 0.65em;
+  text-align: right;
+  margin-top: 0.5em;
+  vertical-align: middle;
+  font-size: 1.1em;
+  border: 0.15em solid #032541;
+  color: #042342;
+}
+#first-luau-details {
+  background: transparent;
+  padding: 1em;
+  max-width: 1200px;
+  background: whitesmoke;
+}
+
+@media (max-width: 700px) {
+  #luau-hero {
+    height: 15em;
+  }
+
+  .luau-details,
+  #playerWrapper,
+  #luau-pricing,
+  #luau-article {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #first-luau-details,
+  #playerWrapper,
+  #luau-pricing {
+    transform: scaleY(-1);
+  }
+
+  #luau-pricing {
+    padding: 1em;
+  }
+
+  #luau-pricing h1 {
+    font-size: 2.5em;
+    max-width: 10em;
+    line-height: 1em;
+    margin: 0 auto;
+  }
+
+  #playerWrapper iframe {
+    max-width: 30em;
+  }
+}
+
+@media (max-width: 700px) {
+  #luau-pricing h1 {
+    font-size: 2em;
+  }
+
+  #luau-article {
+    padding: 2em;
+  }
+
+  #seating-chart img {
+    max-width: 30em;
+  }
+}
+
+#seating-chart img {
+  width: 90%;
+}
+
+
+#luau-highlights {
+  max-width: 40em;
+  margin: 1em auto;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+

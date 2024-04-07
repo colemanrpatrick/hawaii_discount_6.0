@@ -1,3 +1,9 @@
+#page2 {
+	max-height: 35em;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
 /*========== reservation window ==========*/
 #reservation-window {
   width: 100%;
@@ -25,7 +31,7 @@
   padding: 1em;
   width: 35em;
   background-color: white;
-
+  
   white-space: normal;
 }
 #close-reservation {
@@ -44,6 +50,8 @@
   display: block;
 }
 
+
+
 .group-left {
   display: inline-block;
   text-align: left;
@@ -57,6 +65,7 @@
   height: 2em;
   border-radius: 2em;
   vertical-align: middle;
+  
 }
 .product-group {
   width: 100%;
@@ -68,22 +77,28 @@
   text-align: left;
   display: inline-block;
   max-width: 20em;
-  font-size: 1em;
-  cursor: pointer;
+  font-size: 1em;cursor: pointer;
 }
 .group-left .title {
   font-size: 1.25em;
   display: block;
   width: 100%;
+  margin-bottom: 0.25em;
 }
 .price {
-  display: block;
-  font-size: 1.15em;
+  display: inline-block;
+  font-size: 1em;
+  color: #333;
 }
+
 .price span {
-  font-size: 0.8em;
-  margin-left: ;
-  margin-right: 0.5em;
+  font-size: 1.15em;
+  margin-left: 0.25em;
+  font-weight: bold;
+}
+.strike {
+	text-decoration: line-through;
+  opacity: 0.5;
 }
 .product-group .radio .material-symbols-outlined {
   font-size: 2em;
@@ -91,15 +106,17 @@
   border-radius: 1em;
   display: inline-block;
 }
-.product-group .radio.unchecked .material-symbols-outlined {
+.product-group .radio.unchecked .material-symbols-outlined{
   display: none;
 }
-.radio.unchecked {
+.radio.unchecked{
   background-color: white;
 }
-.radio.checked {
+.radio.checked{
   background-color: green;
 }
+
+
 
 #dateInput {
   height: 0;
@@ -229,7 +246,7 @@ a.ui-button:active,
   display: block !important;
   width: 100%;
   text-align: center;
-  margin-top: 2em;
+  
 }
 
 .next-btn,
@@ -271,12 +288,12 @@ a.ui-button:active,
   border-bottom: 0.1em solid #f7795629;
   padding: 0.5em;
 }
-.price-left {
+.price-left{
   width: 60%;
   display: table-cell;
-  text-align: center;
+  text-align: left;
 }
-.price-right {
+.price-right{
   display: table-cell;
   width: 40%;
   text-align: right;
@@ -293,6 +310,7 @@ a.ui-button:active,
   display: block;
   width: 100%;
   text-align: left;
+  font-family: "Montserrat" ,Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .price-container .price-control {
@@ -304,14 +322,13 @@ a.ui-button:active,
 .list-price,
 .sale-price {
   display: inline-block;
-
+  
   text-align: center;
   color: #063c52;
-  font-size: 1.15em;
+  font-size: 1em;
   margin-bottom: 0.25em;
   margin-top: 0.25em;
-  position: relative;
-  width: 4em;
+  position: relative;width: 4.5em;
 }
 
 .list-price.strike-price {
@@ -324,10 +341,8 @@ a.ui-button:active,
   left: 0.25em;
   width: 3.5em;
   height: 1em;
-  top: 1.25em;
+  top: 1.6em;
   line-height: 2em;
-  letter-spacing: -1em;
-  transform: rotate(-15deg);
   border-top: 0.15em solid #333;
 }
 
@@ -358,11 +373,11 @@ a.ui-button:active,
 
 .spinner-container {
   border-radius: 5em;
-  max-width: 7em;
+  max-width: 8em;
   background: #fff;
   border: 0.15em solid #1e4e62;
-  margin: 0.5em 0;
-}
+  font-size: 1em;m;9em;
+display: inline-block;margin-top: 0.5em;lock;}
 
 .spinner {
   width: 2em;
@@ -393,6 +408,7 @@ a.ui-button:active,
   color: #333;
   font-size: 1.2em;
   text-align: center;
+  font-family: "Montserrat" ,Verdana, Geneva, Tahoma, sans-serif;
 }
 .collector-container input[type="text"],
 .collector-container input[type="email"] {
@@ -403,6 +419,7 @@ a.ui-button:active,
   border-radius: 0.75em;
   border: 0.15em solid gainsboro;
 }
+
 
 #reservation-controls {
   text-align: center;
@@ -419,6 +436,8 @@ a.ui-button:active,
   background: white;
   cursor: pointer;
 }
+
+
 
 #addToCartSubmit {
   background-color: #ffc700;
@@ -550,10 +569,7 @@ a.ui-button:active,
   background: none;
   border: 0;
   color: #333;
-  cursor: pointer;
-  text-align: left;
-  float: left;
-  font-size: 1em;
+  cursor: pointer;text-align: left;float: left;font-size: 1em;
   position: absolute;
   left: 0.5em;
 }
@@ -625,16 +641,16 @@ a.ui-button:active,
   display: block;
   text-align: center;
   width: 100%;
-  margin-top: 2em;
+  margin-top: 1em;
 }
-@media (max-width: 750px) {
-  #reservation-container {
+@media(max-width:750px){
+  #reservation-container{
     width: 95%;
     height: 95%;
     max-height: 42em;
     text-align: center;
   }
-  #reservation-book {
+  #reservation-book{
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -645,29 +661,29 @@ a.ui-button:active,
     display: none;
     -webkit-appearance: none;
   }
-  .ui-datepicker table {
+  .ui-datepicker table{
     width: 100%;
-    font-size: 1.1em;
+    font-size: 0.7em;
   }
-  .price-container {
-    padding: 0;
-  }
-}
-
-@media (max-height: 450px) {
-  #reservation-window {
-    font-size: 0.8em;
-  }
-  #reservation-book {
-    height: 20em;
-    overflow: hidden;
-    overflow-y: scroll;
+  .price-container{
+     padding: 0;
   }
 }
 
-@media (max-width: 400px) {
-  .ui-datepicker table {
+@media(max-height: 450px){
+    #reservation-window{
+        font-size: 0.8em
+    }
+    #reservation-book{
+      height: 20em;
+      overflow: hidden;overflow-y: scroll;
+    }
+}
+
+
+@media(max-width:400px){
+  .ui-datepicker table{
     width: 100%;
     font-size: 0.9em;
-  }
+  }    
 }
